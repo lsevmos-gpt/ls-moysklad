@@ -1,0 +1,82 @@
+{
+  "request_id": "preview-gh-final-20261008-e2",
+  "action": "preview_order",
+  "kind": "customerorder",
+  "agent_id": "c27d35f7-b675-11ec-0a80-092f00101c99",
+  "store_id": "0652dd44-3c3a-11e8-9109-f8fc0015f6b0",
+  "description": "Crush-PRO. Заказ покупателя ЛС Героев. Изолят: Пломбир 2 шт. (согласованная замена Ванили), Малина 1, Печенье и банан 1, Черника 1. BCAA: Зелёное яблоко, Апельсин и Вишня по 1 шт. Предтрен 1, Креатин 4, Кальций 1, Цинк 1, Витамин C 1. Цены: Опт для залов.",
+  "positions": [
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d94ff74-e23f-11ef-0a80-08b50035d18b",
+      "quantity": "2",
+      "price_rub": "2600.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d830659-e23f-11ef-0a80-08b50035d15d",
+      "quantity": "1",
+      "price_rub": "2600.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d91b347-e23f-11ef-0a80-08b50035d181",
+      "quantity": "1",
+      "price_rub": "2600.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d9a04c1-e23f-11ef-0a80-08b50035d196",
+      "quantity": "1",
+      "price_rub": "2600.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "c8b1a01f-6abc-11e7-7a6c-d2a900142eea",
+      "quantity": "1",
+      "price_rub": "750.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "c8abb94d-6abc-11e7-7a6c-d2a900142ee2",
+      "quantity": "1",
+      "price_rub": "750.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "c8b0ab55-6abc-11e7-7a6c-d2a900142ee6",
+      "quantity": "1",
+      "price_rub": "750.00"
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "b5d259e4-9f9f-11ed-0a80-00aa0024bc2e",
+      "quantity": "1",
+      "price_rub": "1500.00"
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "9ec2009a-b38a-11ea-0a80-010d000866d6",
+      "quantity": "4",
+      "price_rub": "1300.00"
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "3db22291-21fd-11f0-0a80-05d9001351fa",
+      "quantity": "1",
+      "price_rub": "400.00"
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "7f70f7b8-b391-11ea-0a80-0495000845ca",
+      "quantity": "1",
+      "price_rub": "350.00"
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "14ada336-6ac0-11e7-7a31-d0fd00148c39",
+      "quantity": "1",
+      "price_rub": "350.00"
+    }
+  ]
+}
