@@ -11,7 +11,7 @@ from scripts.bridge import (BridgeError, build_order_payload, do_create, do_look
 
 P = "65a4f178-17cd-41cc-a6f3-111111111111"
 A = "65a4f178-17cd-41cc-a6f3-222222222222"
-O = "65a4f178-17cd-41cc-a6f3-333333333333"
+O = "62774749-69ef-11e7-7a34-5acf0009fff7"
 S = "65a4f178-17cd-41cc-a6f3-444444444444"
 PREVIEW = "preview-test-0001"
 CREATE = "create-test-0001"
@@ -31,7 +31,7 @@ class MockAPI:
         self.calls = []
 
     def get_entity(self, kind, id_):
-        return {"id": id_, "name": {"counterparty": "Поставщик А", "organization": "Линия спорта",
+        return {"id": id_, "name": {"counterparty": "Поставщик А", "organization": "Crush-PRO",
                                    "store": "Главный склад", "product": "Вода 0,5"}.get(kind, kind)}
 
     def call(self, method, endpoint, *, params=None, body=None):
@@ -65,6 +65,19 @@ class BridgeTests(unittest.TestCase):
         req = order_req()
         req["positions"][0]["price_rub"] = "0"
         with self.assertRaises(BridgeError):
+            validate_order(req)
+
+    def test_crush_pro_is_default_organization(self):
+        req = order_req()
+        req.pop("organization_id")
+        clean = validate_order(req)
+        self.assertEqual(clean["organization_id"], O)
+        self.assertEqual(preview_fingerprint(req), preview_fingerprint(order_req()))
+
+    def test_other_organization_is_rejected(self):
+        req = order_req()
+        req["organization_id"] = "65a4f178-17cd-41cc-a6f3-333333333333"
+        with self.assertRaisesRegex(BridgeError, "Crush-PRO"):
             validate_order(req)
 
     def test_invalid_order_type_rejected(self):
@@ -132,10 +145,11 @@ class BridgeTests(unittest.TestCase):
             self.assertIn("Вода 0,5", created["telegram_text"])
             self.assertEqual(len(api.posts), 1)
             body = api.posts[0]
-            self.assertEqual(body["externalCode"], "LSAI-" + CREATE)
+            self.assertEqual(body["externalCode"], "CPAI-" + CREATE)
             self.assertFalse(body["applicable"])
             self.assertEqual(body["positions"][0]["price"], 14990)
             self.assertEqual(body["store"], entity_meta("store", S))
+            self.assertEqual(body["organization"], entity_meta("organization", O))
 
     def test_idempotence_on_retry(self):
         with tempfile.TemporaryDirectory() as tmp:
