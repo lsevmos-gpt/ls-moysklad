@@ -1,0 +1,64 @@
+{
+  "request_id": "preview-konnaya-isolate-20261008-a1",
+  "action": "preview_order",
+  "kind": "customerorder",
+  "agent_id": "ba5b8eb5-d7e0-11ef-0a80-008d004045c0",
+  "store_id": "0652dd44-3c3a-11e8-9109-f8fc0015f6b0",
+  "description": "Crush-PRO. ЛС Конная: изолят сывороточный 1 кг, по 1 банке каждого варианта, включая без вкуса; исключены Манго и Ирландский капучино (кофейный вкус). Опт для залов.",
+  "positions": [
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9a71948e-628e-11f1-0a80-1ef30025d4b5",
+      "quantity": "1",
+      "price_rub": "2600.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d74f674-e23f-11ef-0a80-08b50035d142",
+      "quantity": "1",
+      "price_rub": "2600.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d7f6fab-e23f-11ef-0a80-08b50035d154",
+      "quantity": "1",
+      "price_rub": "2600.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d830659-e23f-11ef-0a80-08b50035d15d",
+      "quantity": "1",
+      "price_rub": "2600.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d8af0ad-e23f-11ef-0a80-08b50035d16f",
+      "quantity": "1",
+      "price_rub": "2600.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d8e6de9-e23f-11ef-0a80-08b50035d178",
+      "quantity": "1",
+      "price_rub": "2600.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d91b347-e23f-11ef-0a80-08b50035d181",
+      "quantity": "1",
+      "price_rub": "2600.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d94ff74-e23f-11ef-0a80-08b50035d18b",
+      "quantity": "1",
+      "price_rub": "2600.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d9a04c1-e23f-11ef-0a80-08b50035d196",
+      "quantity": "1",
+      "price_rub": "2600.00"
+    }
+  ]
+}
