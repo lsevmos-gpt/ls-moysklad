@@ -160,8 +160,22 @@ class MoySkladAPI:
                 if method.upper() == "GET" and exc.code in {429, 500, 502, 503, 504} and attempt + 1 < max_attempts:
                     time.sleep(1 + attempt * 2)
                     continue
-                # Do not propagate the full server response into results: it could contain PII.
-                raise BridgeError(f"МойСклад API: HTTP {exc.code} при {method.upper()} {endpoint}") from None
+                # Expose only official numeric API error codes; never echo raw responses
+                # as they may contain personal records, headers or a bearer token.
+                error_codes = []
+                try:
+                    data = exc.read(20_000)
+                    if exc.headers.get("Content-Encoding", "").lower() == "gzip":
+                        data = gzip.decompress(data)
+                    err = json.loads(data.decode("utf-8"))
+                    if isinstance(err, dict):
+                        for e in err.get("errors", [])[:4]:
+                            if isinstance(e, dict) and isinstance(e.get("code"), int):
+                                error_codes.append(str(e["code"]))
+                except (OSError, ValueError, EOFError):
+                    pass
+                code_suffix = f" (API codes: {','.join(error_codes)})" if error_codes else ""
+                raise BridgeError(f"МойСклад API: HTTP {exc.code}{code_suffix} при {method.upper()} {endpoint}") from None
             except (error.URLError, TimeoutError):
                 if method.upper() == "GET" and attempt + 1 < max_attempts:
                     time.sleep(1 + attempt * 2)
