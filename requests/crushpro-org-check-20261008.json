@@ -1,0 +1,7 @@
+{
+  "request_id": "crushpro-org-check-20261008",
+  "action": "lookup",
+  "entity": "organization",
+  "query": "Crush-PRO",
+  "limit": 10
+}
