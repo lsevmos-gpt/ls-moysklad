@@ -1,0 +1,103 @@
+{
+  "request_id": "gh-order-20261008-cherry-d1",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "variant",
+  "query": "Вишня",
+  "matches": [
+    {
+      "id": "29b3af10-10c2-11ee-0a80-01af00048219",
+      "name": "Сустав бустер 200 г. (Вишня)",
+      "code": "00113",
+      "salePrices": [
+        {
+          "value_rub": "2800.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "2500.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "2500.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "2500.00",
+          "priceType": "Опт для залов"
+        }
+      ]
+    },
+    {
+      "id": "ae303e03-8b20-11ef-0a80-076200013b08",
+      "name": "Цитруллин малат 200 г. (Вишня)",
+      "code": "00125",
+      "salePrices": [
+        {
+          "value_rub": "1200.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "1200.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "1000.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "900.00",
+          "priceType": "Опт для залов"
+        }
+      ]
+    },
+    {
+      "id": "c8b0ab55-6abc-11e7-7a6c-d2a900142ee6",
+      "name": "Бцаа 2:1:1 200 г. (Вишня)",
+      "code": "00010",
+      "salePrices": [
+        {
+          "value_rub": "900.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "750.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "750.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "750.00",
+          "priceType": "Опт для залов"
+        }
+      ]
+    },
+    {
+      "id": "ce15f055-7acb-11ec-0a80-02c8001144f1",
+      "name": "Коллаген с витамином С 200 г. (Вишня)",
+      "code": "00090",
+      "salePrices": [
+        {
+          "value_rub": "850.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "800.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "750.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "700.00",
+          "priceType": "Опт для залов"
+        }
+      ]
+    }
+  ],
+  "returned": 4,
+  "truncated": false
+}

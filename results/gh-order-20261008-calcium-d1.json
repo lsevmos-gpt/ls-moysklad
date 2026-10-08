@@ -1,0 +1,35 @@
+{
+  "request_id": "gh-order-20261008-calcium-d1",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "product",
+  "query": "Кальций",
+  "matches": [
+    {
+      "id": "3db22291-21fd-11f0-0a80-05d9001351fa",
+      "name": "Кальций с витамином D3, 600 мг, 90 капсул",
+      "code": "00097",
+      "salePrices": [
+        {
+          "value_rub": "450.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "400.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "400.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "400.00",
+          "priceType": "Опт для залов"
+        }
+      ],
+      "buyPrice_rub": "200.00"
+    }
+  ],
+  "returned": 1,
+  "truncated": false
+}

@@ -1,0 +1,35 @@
+{
+  "request_id": "gh-order-20261008-zinc-d1",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "product",
+  "query": "Цинк",
+  "matches": [
+    {
+      "id": "7f70f7b8-b391-11ea-0a80-0495000845ca",
+      "name": "Цинк 60 таб. 25 мг в 1 таб.",
+      "code": "00051",
+      "salePrices": [
+        {
+          "value_rub": "550.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "400.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "400.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "350.00",
+          "priceType": "Опт для залов"
+        }
+      ],
+      "buyPrice_rub": "250.00"
+    }
+  ],
+  "returned": 1,
+  "truncated": false
+}

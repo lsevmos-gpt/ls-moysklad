@@ -1,0 +1,10 @@
+{
+  "request_id": "gh-order-20261008-bcaa-d1",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "product",
+  "query": "BCAA",
+  "matches": [],
+  "returned": 0,
+  "truncated": false
+}

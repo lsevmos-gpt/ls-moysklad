@@ -1,0 +1,15 @@
+{
+  "request_id": "gh-order-20261008-buyer-d1",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "counterparty",
+  "query": "Геро",
+  "matches": [
+    {
+      "id": "c27d35f7-b675-11ec-0a80-092f00101c99",
+      "name": "ЛС Героев"
+    }
+  ],
+  "returned": 1,
+  "truncated": false
+}

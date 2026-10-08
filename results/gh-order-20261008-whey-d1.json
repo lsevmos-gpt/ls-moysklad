@@ -1,0 +1,35 @@
+{
+  "request_id": "gh-order-20261008-whey-d1",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "product",
+  "query": "Сывороточный",
+  "matches": [
+    {
+      "id": "9d6cb8c4-e23f-11ef-0a80-08b50035d139",
+      "name": "Сывороточный изолят 1 кг (Банка)",
+      "code": "00096",
+      "salePrices": [
+        {
+          "value_rub": "3000.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "2700.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "2700.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "2600.00",
+          "priceType": "Опт для залов"
+        }
+      ],
+      "buyPrice_rub": "2000.00"
+    }
+  ],
+  "returned": 1,
+  "truncated": false
+}

@@ -1,0 +1,80 @@
+{
+  "request_id": "gh-order-20261008-cookie-d1",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "variant",
+  "query": "печенье",
+  "matches": [
+    {
+      "id": "544743e5-b38a-11ea-0a80-092e0007a8e7",
+      "name": "Казеин 1000 г. (Банка) (Печенье и банан)",
+      "code": "00041",
+      "salePrices": [
+        {
+          "value_rub": "2600.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "2500.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "2500.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "2500.00",
+          "priceType": "Опт для залов"
+        }
+      ]
+    },
+    {
+      "id": "9b306e90-b868-11ea-0a80-03ed00121125",
+      "name": "Гейнер 1000 г. (Печенье и банан)",
+      "code": "00072",
+      "salePrices": [
+        {
+          "value_rub": "1100.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "950.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "950.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "950.00",
+          "priceType": "Опт для залов"
+        }
+      ]
+    },
+    {
+      "id": "9d91b347-e23f-11ef-0a80-08b50035d181",
+      "name": "Сывороточный изолят 1 кг (Банка) (Печенье и банан)",
+      "code": "00136",
+      "salePrices": [
+        {
+          "value_rub": "3000.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "2700.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "2700.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "2600.00",
+          "priceType": "Опт для залов"
+        }
+      ]
+    }
+  ],
+  "returned": 3,
+  "truncated": false
+}
