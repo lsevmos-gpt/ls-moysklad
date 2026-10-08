@@ -1,0 +1,7 @@
+{
+  "request_id": "lookup-kubik-customers-20261008-b2",
+  "action": "lookup",
+  "entity": "counterparty",
+  "query": "Куб",
+  "limit": 100
+}
