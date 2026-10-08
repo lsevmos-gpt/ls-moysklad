@@ -1,5 +1,14 @@
 {
   "request_id": "repricing-kubik-creatine-20261008-c5",
-  "status": "error",
-  "message": "Невозможно однозначно определить актуальную цену товара"
+  "action": "refresh_from_confirmed_order",
+  "status": "updated",
+  "order_name": "00072",
+  "order_id": "3379dd14-c2da-11f1-0a80-1134009fae0e",
+  "product_name": "Креатина моногидрат 300 г.",
+  "old_price_rub": "1200.00",
+  "new_price_rub": "1300.00",
+  "old_total_rub": "14200.00",
+  "total_rub": "14300.00",
+  "changed_positions": 1,
+  "document_url": "https://online.moysklad.ru/app/#customerorder/edit?id=3379dd14-c2da-11f1-0a80-1134009fae0e"
 }
