@@ -1,0 +1,5 @@
+{
+  "request_id": "create-konnaya-isolate-20261008-a1",
+  "status": "error",
+  "message": "Запись отключена: установите GitHub Actions variable MOYSKLAD_WRITE_ENABLED=YES после проверки проекта"
+}
