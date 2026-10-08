@@ -1,0 +1,23 @@
+{
+  "request_id": "find-konnaya-client-20261008",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "counterparty",
+  "query": "Конн",
+  "matches": [
+    {
+      "id": "6e1754c8-881e-11f1-0a80-1858001cb08c",
+      "name": "Рома конная"
+    },
+    {
+      "id": "ba5b8eb5-d7e0-11ef-0a80-008d004045c0",
+      "name": "ЛС Конная"
+    },
+    {
+      "id": "d5eb139f-16a8-11f0-0a80-166b0006715d",
+      "name": "Лера Конная"
+    }
+  ],
+  "returned": 3,
+  "truncated": false
+}

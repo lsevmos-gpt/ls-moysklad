@@ -1,0 +1,10 @@
+{
+  "request_id": "find-isolate-english-20261008",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "product",
+  "query": "isolate",
+  "matches": [],
+  "returned": 0,
+  "truncated": false
+}
