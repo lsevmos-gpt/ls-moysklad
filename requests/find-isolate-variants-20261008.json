@@ -1,0 +1,7 @@
+{
+  "request_id": "find-isolate-variants-20261008",
+  "action": "lookup",
+  "entity": "variant",
+  "query": "изолят",
+  "limit": 100
+}
