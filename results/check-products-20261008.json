@@ -1,5 +1,10 @@
 {
   "request_id": "check-products-20261008",
-  "status": "error",
-  "message": "МойСклад API: HTTP 400 (API codes: 1062) при GET /entity/product"
+  "action": "lookup",
+  "status": "ok",
+  "entity": "product",
+  "query": "протеин",
+  "matches": [],
+  "returned": 0,
+  "truncated": false
 }
