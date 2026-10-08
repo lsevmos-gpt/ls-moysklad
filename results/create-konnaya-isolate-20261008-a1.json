@@ -1,5 +1,12 @@
 {
   "request_id": "create-konnaya-isolate-20261008-a1",
-  "status": "error",
-  "message": "Запись отключена: установите GitHub Actions variable MOYSKLAD_WRITE_ENABLED=YES после проверки проекта"
+  "action": "create_order",
+  "status": "created",
+  "kind": "customerorder",
+  "document_id": "0501b6cd-c2d8-11f1-0a80-1134009f1ac0",
+  "document_name": "00071",
+  "document_url": "https://online.moysklad.ru/app/#customerorder/edit?id=0501b6cd-c2d8-11f1-0a80-1134009f1ac0",
+  "externalCode": "CPAI-create-konnaya-isolate-20261008-a1",
+  "total_rub": "23400.00",
+  "note": "Документ создан непроведённым. Telegram, оплата, приёмка и списания не выполнялись."
 }
