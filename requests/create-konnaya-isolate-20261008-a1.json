@@ -62,5 +62,6 @@
     }
   ],
   "confirmed": true,
-  "approved_preview_id": "preview-konnaya-isolate-20261008-a1"
+  "approved_preview_id": "preview-konnaya-isolate-20261008-a1",
+  "retry_after_write_enable": "User enabled MOYSKLAD_WRITE_ENABLED and reiterated authorization; do not alter order parameters."
 }
