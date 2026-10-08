@@ -1,0 +1,15 @@
+{
+  "request_id": "crushpro-org-check-20261008",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "organization",
+  "query": "Crush-PRO",
+  "matches": [
+    {
+      "id": "62774749-69ef-11e7-7a34-5acf0009fff7",
+      "name": "Crush-PRO"
+    }
+  ],
+  "returned": 1,
+  "truncated": false
+}
