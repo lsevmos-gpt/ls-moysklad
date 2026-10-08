@@ -1,0 +1,40 @@
+{
+  "request_id": "preview-kubik-isolate-creatine-20261008-b2",
+  "action": "preview_order",
+  "kind": "customerorder",
+  "agent_id": "4289713b-1173-11ed-0a80-009d002b315e",
+  "store_id": "0652dd44-3c3a-11e8-9109-f8fc0015f6b0",
+  "description": "Crush-PRO. Покупатель ЛС Кубик. Изолят 1 кг: Печенье и банан 2; Персик 1; Малина 1; Солёная карамель (тоффи) 1. Креатина моногидрат 300 г. 1. Категория цен: Опт для залов.",
+  "positions": [
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d91b347-e23f-11ef-0a80-08b50035d181",
+      "quantity": "2",
+      "price_rub": "2600.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d8e6de9-e23f-11ef-0a80-08b50035d178",
+      "quantity": "1",
+      "price_rub": "2600.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d830659-e23f-11ef-0a80-08b50035d15d",
+      "quantity": "1",
+      "price_rub": "2600.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9a71948e-628e-11f1-0a80-1ef30025d4b5",
+      "quantity": "1",
+      "price_rub": "2600.00"
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "9ec2009a-b38a-11ea-0a80-010d000866d6",
+      "quantity": "1",
+      "price_rub": "1200.00"
+    }
+  ]
+}
