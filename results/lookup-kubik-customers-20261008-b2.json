@@ -1,0 +1,15 @@
+{
+  "request_id": "lookup-kubik-customers-20261008-b2",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "counterparty",
+  "query": "Куб",
+  "matches": [
+    {
+      "id": "4289713b-1173-11ed-0a80-009d002b315e",
+      "name": "ЛС Кубик"
+    }
+  ],
+  "returned": 1,
+  "truncated": false
+}
