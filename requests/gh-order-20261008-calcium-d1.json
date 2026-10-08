@@ -1,0 +1,7 @@
+{
+  "request_id": "gh-order-20261008-calcium-d1",
+  "action": "lookup",
+  "entity": "product",
+  "query": "Кальций",
+  "limit": 90
+}

@@ -1,0 +1,7 @@
+{
+  "request_id": "gh-order-20261008-vitc-d1",
+  "action": "lookup",
+  "entity": "product",
+  "query": "Витамин С",
+  "limit": 90
+}

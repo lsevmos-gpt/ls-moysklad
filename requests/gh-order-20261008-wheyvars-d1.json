@@ -1,0 +1,7 @@
+{
+  "request_id": "gh-order-20261008-wheyvars-d1",
+  "action": "lookup",
+  "entity": "variant",
+  "query": "Сывороточный",
+  "limit": 100
+}

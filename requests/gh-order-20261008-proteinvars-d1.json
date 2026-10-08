@@ -1,0 +1,7 @@
+{
+  "request_id": "gh-order-20261008-proteinvars-d1",
+  "action": "lookup",
+  "entity": "variant",
+  "query": "Протеин",
+  "limit": 90
+}

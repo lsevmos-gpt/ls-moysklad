@@ -1,0 +1,7 @@
+{
+  "request_id": "gh-order-20261008-creatine-d1",
+  "action": "lookup",
+  "entity": "product",
+  "query": "Креатин",
+  "limit": 90
+}

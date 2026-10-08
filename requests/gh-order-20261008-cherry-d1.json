@@ -1,0 +1,7 @@
+{
+  "request_id": "gh-order-20261008-cherry-d1",
+  "action": "lookup",
+  "entity": "variant",
+  "query": "Вишня",
+  "limit": 90
+}

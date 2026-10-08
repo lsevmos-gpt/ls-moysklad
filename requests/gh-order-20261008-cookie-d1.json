@@ -1,0 +1,7 @@
+{
+  "request_id": "gh-order-20261008-cookie-d1",
+  "action": "lookup",
+  "entity": "variant",
+  "query": "печенье",
+  "limit": 90
+}

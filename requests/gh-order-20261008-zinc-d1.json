@@ -1,0 +1,7 @@
+{
+  "request_id": "gh-order-20261008-zinc-d1",
+  "action": "lookup",
+  "entity": "product",
+  "query": "Цинк",
+  "limit": 90
+}

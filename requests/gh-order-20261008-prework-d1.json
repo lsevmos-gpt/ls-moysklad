@@ -1,0 +1,7 @@
+{
+  "request_id": "gh-order-20261008-prework-d1",
+  "action": "lookup",
+  "entity": "product",
+  "query": "предтрен",
+  "limit": 90
+}
