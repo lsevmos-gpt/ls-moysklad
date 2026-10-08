@@ -1,0 +1,12 @@
+{
+  "request_id": "create-kubik-order-20261008-b2",
+  "action": "create_order",
+  "status": "created",
+  "kind": "customerorder",
+  "document_id": "3379dd14-c2da-11f1-0a80-1134009fae0e",
+  "document_name": "00072",
+  "document_url": "https://online.moysklad.ru/app/#customerorder/edit?id=3379dd14-c2da-11f1-0a80-1134009fae0e",
+  "externalCode": "CPAI-create-kubik-order-20261008-b2",
+  "total_rub": "14200.00",
+  "note": "Документ создан непроведённым. Telegram, оплата, приёмка и списания не выполнялись."
+}
