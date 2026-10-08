@@ -1,0 +1,63 @@
+{
+  "request_id": "preview-kubik-isolate-creatine-20261008-b2",
+  "action": "preview_order",
+  "status": "ok",
+  "kind": "customerorder",
+  "agent": {
+    "id": "4289713b-1173-11ed-0a80-009d002b315e",
+    "name": "ЛС Кубик"
+  },
+  "organization": {
+    "id": "62774749-69ef-11e7-7a34-5acf0009fff7",
+    "name": "Crush-PRO"
+  },
+  "store": {
+    "id": "0652dd44-3c3a-11e8-9109-f8fc0015f6b0",
+    "name": "Основной склад"
+  },
+  "positions": [
+    {
+      "type": "variant",
+      "id": "9d91b347-e23f-11ef-0a80-08b50035d181",
+      "name": "Сывороточный изолят 1 кг (Банка) (Печенье и банан)",
+      "quantity": "2",
+      "price_rub": "2600.00",
+      "sum_rub": "5200.00"
+    },
+    {
+      "type": "variant",
+      "id": "9d8e6de9-e23f-11ef-0a80-08b50035d178",
+      "name": "Сывороточный изолят 1 кг (Банка) (Персик)",
+      "quantity": "1",
+      "price_rub": "2600.00",
+      "sum_rub": "2600.00"
+    },
+    {
+      "type": "variant",
+      "id": "9d830659-e23f-11ef-0a80-08b50035d15d",
+      "name": "Сывороточный изолят 1 кг (Банка) (Малина)",
+      "quantity": "1",
+      "price_rub": "2600.00",
+      "sum_rub": "2600.00"
+    },
+    {
+      "type": "variant",
+      "id": "9a71948e-628e-11f1-0a80-1ef30025d4b5",
+      "name": "Сывороточный изолят 1 кг (Банка) (Соленая карамель)",
+      "quantity": "1",
+      "price_rub": "2600.00",
+      "sum_rub": "2600.00"
+    },
+    {
+      "type": "product",
+      "id": "9ec2009a-b38a-11ea-0a80-010d000866d6",
+      "name": "Креатина моногидрат 300 г.",
+      "quantity": "1",
+      "price_rub": "1200.00",
+      "sum_rub": "1200.00"
+    }
+  ],
+  "total_rub": "14200.00",
+  "preview_sha256": "fe5f0597112f550a92eb0fdb8b67f65387d4ea144b07214840d7ddb9a7e50d44",
+  "note": "Предпросмотр, в МоемСкладе документ не создан. Цена берётся из заявки и не заменяется автоматически. Остатки отдельно не проверены."
+}
