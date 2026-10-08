@@ -1,0 +1,9 @@
+{
+  "request_id": "repricing-kubik-creatine-20261008-c5",
+  "action": "refresh_from_confirmed_order",
+  "source_order_request_id": "create-kubik-order-20261008-b2",
+  "product_id": "9ec2009a-b38a-11ea-0a80-010d000866d6",
+  "price_type": "Опт для залов",
+  "expected_new_price_rub": "1300.00",
+  "confirmed": true
+}
