@@ -1,0 +1,7 @@
+{
+  "request_id": "lookup-toffee-variants-20261008-b2",
+  "action": "lookup",
+  "entity": "variant",
+  "query": "тоффи",
+  "limit": 100
+}
