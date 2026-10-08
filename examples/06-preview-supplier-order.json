@@ -3,9 +3,8 @@
   "action": "preview_order",
   "kind": "purchaseorder",
   "agent_id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
-  "organization_id": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
-  "store_id": "cccccccc-cccc-cccc-cccc-cccccccccccc",
-  "description": "Закупка для клуба",
+  "store_id": "0652dd44-3c3a-11e8-9109-f8fc0015f6b0",
+  "description": "Пример заказа поставщику Crush-PRO",
   "positions": [
     {
       "assortment_type": "product",
