@@ -1,0 +1,7 @@
+{
+  "request_id": "find-isolate-products-20261008",
+  "action": "lookup",
+  "entity": "product",
+  "query": "изолят",
+  "limit": 100
+}
