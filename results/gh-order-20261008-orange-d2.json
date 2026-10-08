@@ -1,0 +1,80 @@
+{
+  "request_id": "gh-order-20261008-orange-d2",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "variant",
+  "query": "Апельсин",
+  "matches": [
+    {
+      "id": "1af88a9e-c289-11ed-0a80-10eb00005a3b",
+      "name": "Изотоник витаминно - минеральный 900 г. (банка) (Апельсин)",
+      "code": "00109",
+      "salePrices": [
+        {
+          "value_rub": "1400.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "1200.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "1200.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "1100.00",
+          "priceType": "Опт для залов"
+        }
+      ]
+    },
+    {
+      "id": "ae2bcbc4-8b20-11ef-0a80-076200013b00",
+      "name": "Цитруллин малат 200 г. (Апельсин)",
+      "code": "00124",
+      "salePrices": [
+        {
+          "value_rub": "1200.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "1200.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "1000.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "900.00",
+          "priceType": "Опт для залов"
+        }
+      ]
+    },
+    {
+      "id": "c8abb94d-6abc-11e7-7a6c-d2a900142ee2",
+      "name": "Бцаа 2:1:1 200 г. (Апельсин)",
+      "code": "00009",
+      "salePrices": [
+        {
+          "value_rub": "900.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "750.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "750.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "750.00",
+          "priceType": "Опт для залов"
+        }
+      ]
+    }
+  ],
+  "returned": 3,
+  "truncated": false
+}

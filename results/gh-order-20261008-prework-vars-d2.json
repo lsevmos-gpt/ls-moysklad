@@ -1,0 +1,10 @@
+{
+  "request_id": "gh-order-20261008-prework-vars-d2",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "variant",
+  "query": "Предтренировочный",
+  "matches": [],
+  "returned": 0,
+  "truncated": false
+}

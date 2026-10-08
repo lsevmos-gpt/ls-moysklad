@@ -1,0 +1,34 @@
+{
+  "request_id": "gh-order-20261008-apple-d2",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "variant",
+  "query": "Яблоко",
+  "matches": [
+    {
+      "id": "c8b1a01f-6abc-11e7-7a6c-d2a900142eea",
+      "name": "Бцаа 2:1:1 200 г. (Зеленое яблоко)",
+      "code": "00011",
+      "salePrices": [
+        {
+          "value_rub": "900.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "750.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "750.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "750.00",
+          "priceType": "Опт для залов"
+        }
+      ]
+    }
+  ],
+  "returned": 1,
+  "truncated": false
+}
