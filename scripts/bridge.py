@@ -17,6 +17,9 @@ from typing import Any
 from urllib import error, parse, request
 
 BASE_URL = "https://api.moysklad.ru/api/remap/1.2"
+# This is a standalone Crush-PRO accounting project; all order documents belong to this organization.
+CRUSH_PRO_ORGANIZATION_ID = "62774749-69ef-11e7-7a34-5acf0009fff7"
+EXTERNAL_ORDER_PREFIX = "CPAI-"
 VALID_TYPES = {"product", "variant", "service"}
 VALID_LOOKUP_TYPES = VALID_TYPES | {"counterparty", "organization", "store"}
 VALID_KINDS = {"customerorder", "purchaseorder"}
@@ -68,7 +71,7 @@ def canonical_request(req: dict) -> dict:
     return {
         "kind": req.get("kind"),
         "agent_id": req.get("agent_id"),
-        "organization_id": req.get("organization_id"),
+        "organization_id": CRUSH_PRO_ORGANIZATION_ID,
         "store_id": req.get("store_id"),
         "description": req.get("description", ""),
         "positions": req.get("positions"),
@@ -85,7 +88,12 @@ def validate_order(req: dict) -> dict:
     if kind not in VALID_KINDS:
         raise BridgeError("kind: разрешены только customerorder и purchaseorder")
     agent = ensure_uuid(req.get("agent_id"), "agent_id")
-    organization = ensure_uuid(req.get("organization_id"), "organization_id")
+    requested_org = req.get("organization_id")
+    if requested_org is not None:
+        requested_org = ensure_uuid(requested_org, "organization_id")
+        if requested_org != CRUSH_PRO_ORGANIZATION_ID:
+            raise BridgeError("Доступна только организация Crush-PRO из подключённого МоегоСклада")
+    organization = CRUSH_PRO_ORGANIZATION_ID
     store = ensure_uuid(req.get("store_id"), "store_id")
     description = req.get("description", "")
     if not isinstance(description, str) or len(description) > 1200:
@@ -259,7 +267,7 @@ def build_order_payload(req: dict, clean: dict) -> dict:
     for p in clean["positions"]:
         positions.append({"quantity": float(p["quantity"]), "price": p["price_minor"],
                           "assortment": entity_meta(p["assortment_type"], p["assortment_id"])})
-    return {"externalCode": "LSAI-" + ensure_request_id(req["request_id"]),
+    return {"externalCode": EXTERNAL_ORDER_PREFIX + ensure_request_id(req["request_id"]),
             "applicable": False, "description": clean["description"],
             "organization": entity_meta("organization", clean["organization_id"]),
             "store": entity_meta("store", clean["store_id"]),
