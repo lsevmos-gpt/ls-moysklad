@@ -1,0 +1,7 @@
+{
+  "request_id": "check-connection-20261008",
+  "action": "lookup",
+  "entity": "store",
+  "query": "",
+  "limit": 30
+}
