@@ -22,7 +22,7 @@ def main() -> int:
                 old = json.loads(output_file.read_text(encoding="utf-8"))
             except (ValueError, OSError):
                 old = {}
-            if old.get("status") in {"ok", "created", "already_exists"}:
+            if old.get("status") in {"ok", "created", "already_exists", "updated", "already_updated"}:
                 print(f"{file.name}: already processed")
                 continue
         try:
