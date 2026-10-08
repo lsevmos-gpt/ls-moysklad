@@ -359,9 +359,9 @@ def _simple_line(row: dict) -> tuple[str, str, Decimal, int, str]:
     except InvalidOperation:
         raise BridgeError("Неверное количество в позиции заказа") from None
     price = row.get("price")
-    if not qty.is_finite() or isinstance(price, bool) or not isinstance(price, int):
+    if not qty.is_finite() or isinstance(price, bool) or not isinstance(price, (int, float)) or not float(price).is_integer():
         raise BridgeError("Некорректные количества или цены в позициях")
-    return kind, item_id, qty, price, pos_id
+    return kind, item_id, qty, int(price), pos_id
 
 
 def refresh_customer_order_line(req: dict, api: MoySkladAPI, *, writes_enabled: bool, inspect_only: bool = False) -> dict:
@@ -422,7 +422,7 @@ def refresh_customer_order_line(req: dict, api: MoySkladAPI, *, writes_enabled: 
     matches = [x["value"] for x in sale_prices
                if isinstance(x, dict) and isinstance(x.get("priceType"), dict)
                and x["priceType"].get("name") == price_type
-               and isinstance(x.get("value"), int) and not isinstance(x.get("value"), bool)]
+               and isinstance(x.get("value"), (int, float)) and not isinstance(x.get("value"), bool) and float(x.get("value")).is_integer()]
     if len(matches) != 1:
         raise BridgeError("Невозможно однозначно определить актуальную цену товара")
     if matches[0] != new_price:
@@ -454,16 +454,16 @@ def refresh_customer_order_line(req: dict, api: MoySkladAPI, *, writes_enabled: 
             raise BridgeError("Количество или цена другой позиции заказа изменена; изменение отменено")
     updated_total = old_total + new_price - old_price
     current_total = order.get("sum")
-    if isinstance(current_total, bool) or not isinstance(current_total, int):
+    if isinstance(current_total, bool) or not isinstance(current_total, (int, float)) or not float(current_total).is_integer():
         raise BridgeError("Невозможно подтвердить общую сумму заказа")
     if target[1] == new_price:
-        if current_total != updated_total:
+        if int(current_total) != updated_total:
             raise BridgeError("Цена товара уже обновлена, но итог заказа не совпадает")
         return {"status": "already_updated", "order_name": expected_name, "order_id": order_id,
                 "product_name": product.get("name"), "old_price_rub": fmt_rub(old_price),
                 "new_price_rub": fmt_rub(new_price), "total_rub": fmt_rub(current_total),
                 "changed_positions": 0, "document_url": order.get("meta", {}).get("uuidHref")}
-    if target[1] != old_price or current_total != old_total:
+    if target[1] != old_price or int(current_total) != old_total:
         raise BridgeError("Фактическая цена или сумма заказа отличаются от ожидаемых; изменение отменено")
     if inspect_only:
         return {"status": "ok", "order_name": expected_name, "order_id": order_id,
