@@ -139,7 +139,7 @@ class MoySkladAPI:
         if params:
             url += "?" + parse.urlencode(params)
         headers = {"Authorization": f"Bearer {self.token}",
-                   "Accept": "application/json",
+                   "Accept": "application/json;charset=utf-8",
                    "Accept-Encoding": "gzip"}
         payload = json.dumps(body, ensure_ascii=False).encode("utf-8") if body is not None else None
         if body is not None:
