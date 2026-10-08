@@ -1,0 +1,7 @@
+{
+  "request_id": "find-konnaya-client-20261008",
+  "action": "lookup",
+  "entity": "counterparty",
+  "query": "Конн",
+  "limit": 50
+}
