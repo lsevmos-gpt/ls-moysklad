@@ -1,0 +1,7 @@
+{
+  "request_id": "verify-organizations-20261008",
+  "action": "lookup",
+  "entity": "organization",
+  "query": "",
+  "limit": 10
+}
