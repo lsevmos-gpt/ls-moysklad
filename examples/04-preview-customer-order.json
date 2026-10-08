@@ -1,0 +1,17 @@
+{
+  "request_id": "preview-customer-0001",
+  "action": "preview_order",
+  "kind": "customerorder",
+  "agent_id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+  "organization_id": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+  "store_id": "cccccccc-cccc-cccc-cccc-cccccccccccc",
+  "description": "Пример: проверить клиента и цену",
+  "positions": [
+    {
+      "assortment_type": "product",
+      "assortment_id": "dddddddd-dddd-dddd-dddd-dddddddddddd",
+      "quantity": "2",
+      "price_rub": "149.90"
+    }
+  ]
+}

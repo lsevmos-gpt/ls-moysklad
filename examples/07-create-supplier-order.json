@@ -1,0 +1,19 @@
+{
+  "request_id": "create-supplier-0001",
+  "action": "create_order",
+  "confirmed": true,
+  "approved_preview_id": "preview-supplier-0001",
+  "kind": "purchaseorder",
+  "agent_id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+  "organization_id": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+  "store_id": "cccccccc-cccc-cccc-cccc-cccccccccccc",
+  "description": "Закупка для клуба",
+  "positions": [
+    {
+      "assortment_type": "product",
+      "assortment_id": "dddddddd-dddd-dddd-dddd-dddddddddddd",
+      "quantity": "10",
+      "price_rub": "125.00"
+    }
+  ]
+}

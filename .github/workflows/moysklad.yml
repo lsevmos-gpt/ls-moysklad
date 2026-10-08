@@ -1,0 +1,51 @@
+name: MoySklad requests
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'requests/**.json'
+      - 'scripts/**'
+      - '.github/workflows/moysklad.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: moysklad-bridge-orders
+  cancel-in-progress: false
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - name: Update working tree before processing
+        run: git pull --ff-only origin main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run unit tests (offline)
+        run: python -m unittest discover -s tests -v
+      - name: Process requests
+        env:
+          MOYSKLAD_TOKEN: ${{ secrets.MOYSKLAD_TOKEN }}
+          MOYSKLAD_WRITE_ENABLED: ${{ vars.MOYSKLAD_WRITE_ENABLED }}
+        run: python -m scripts.process_requests
+      - name: Commit results (never the API token)
+        run: |
+          git config user.name "ls-moysklad-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --all results/
+          if git diff --cached --quiet; then
+            echo "No new results"
+          else
+            git commit -m "MoySklad: record request results [skip ci]"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi

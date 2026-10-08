@@ -1,0 +1,7 @@
+{
+  "request_id": "lookup-products-0001",
+  "action": "lookup",
+  "entity": "product",
+  "query": "протеин",
+  "limit": 20
+}

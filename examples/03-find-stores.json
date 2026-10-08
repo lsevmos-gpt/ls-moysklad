@@ -1,0 +1,6 @@
+{
+  "request_id": "lookup-stores-0001",
+  "action": "lookup",
+  "entity": "store",
+  "query": ""
+}

@@ -1,0 +1,7 @@
+{
+  "request_id": "lookup-suppliers-0001",
+  "action": "lookup",
+  "entity": "counterparty",
+  "query": "Поставщик",
+  "limit": 20
+}
