@@ -1,0 +1,35 @@
+{
+  "request_id": "check-creatine-price-20261008-c3",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "product",
+  "query": "Креатина моногидрат",
+  "matches": [
+    {
+      "id": "9ec2009a-b38a-11ea-0a80-010d000866d6",
+      "name": "Креатина моногидрат 300 г.",
+      "code": "00035",
+      "salePrices": [
+        {
+          "value_rub": "1500.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "1300.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "1300.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "1300.00",
+          "priceType": "Опт для залов"
+        }
+      ],
+      "buyPrice_rub": "800.00"
+    }
+  ],
+  "returned": 1,
+  "truncated": false
+}
