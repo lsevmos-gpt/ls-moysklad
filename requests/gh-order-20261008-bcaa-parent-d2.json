@@ -1,0 +1,7 @@
+{
+  "request_id": "gh-order-20261008-bcaa-parent-d2",
+  "action": "lookup",
+  "entity": "product",
+  "query": "Бцаа",
+  "limit": 100
+}

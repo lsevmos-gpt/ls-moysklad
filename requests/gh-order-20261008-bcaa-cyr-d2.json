@@ -1,0 +1,7 @@
+{
+  "request_id": "gh-order-20261008-bcaa-cyr-d2",
+  "action": "lookup",
+  "entity": "variant",
+  "query": "Бцаа",
+  "limit": 100
+}

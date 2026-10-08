@@ -1,0 +1,7 @@
+{
+  "request_id": "gh-order-20261008-bca-exact-d2",
+  "action": "lookup",
+  "entity": "variant",
+  "query": "2:1:1",
+  "limit": 100
+}

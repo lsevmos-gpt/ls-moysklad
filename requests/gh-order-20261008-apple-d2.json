@@ -1,0 +1,7 @@
+{
+  "request_id": "gh-order-20261008-apple-d2",
+  "action": "lookup",
+  "entity": "variant",
+  "query": "Яблоко",
+  "limit": 100
+}

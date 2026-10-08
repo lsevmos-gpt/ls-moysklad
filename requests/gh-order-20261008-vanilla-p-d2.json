@@ -1,0 +1,7 @@
+{
+  "request_id": "gh-order-20261008-vanilla-p-d2",
+  "action": "lookup",
+  "entity": "product",
+  "query": "Ваниль",
+  "limit": 100
+}
