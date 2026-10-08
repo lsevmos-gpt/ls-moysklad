@@ -5,6 +5,7 @@ MOYSKLAD_TOKEN from a GitHub Actions repository secret.
 """
 from __future__ import annotations
 
+import gzip
 import hashlib
 import json
 import os
@@ -137,15 +138,21 @@ class MoySkladAPI:
         url = BASE_URL + endpoint
         if params:
             url += "?" + parse.urlencode(params)
-        headers = {"Authorization": f"Bearer {self.token}", "Accept": "application/json",
-                   "Content-Type": "application/json; charset=utf-8"}
+        headers = {"Authorization": f"Bearer {self.token}",
+                   "Accept": "application/json",
+                   "Accept-Encoding": "gzip"}
         payload = json.dumps(body, ensure_ascii=False).encode("utf-8") if body is not None else None
+        if body is not None:
+            headers["Content-Type"] = "application/json"
         max_attempts = 3 if method.upper() == "GET" else 1  # Never replay a POST blindly.
         for attempt in range(max_attempts):
             req = request.Request(url, data=payload, headers=headers, method=method.upper())
             try:
                 with request.urlopen(req, timeout=25) as response:
-                    parsed = json.loads(response.read(3_000_000).decode("utf-8"))
+                    raw = response.read(3_000_000)
+                    if response.headers.get("Content-Encoding", "").lower() == "gzip":
+                        raw = gzip.decompress(raw)
+                    parsed = json.loads(raw.decode("utf-8"))
                     if not isinstance(parsed, dict):
                         raise BridgeError("API вернул неожиданный формат ответа")
                     return parsed
