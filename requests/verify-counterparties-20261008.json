@@ -1,0 +1,7 @@
+{
+  "request_id": "verify-counterparties-20261008",
+  "action": "lookup",
+  "entity": "counterparty",
+  "query": "",
+  "limit": 10
+}
