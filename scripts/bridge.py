@@ -491,6 +491,45 @@ def refresh_customer_order_line(req: dict, api: MoySkladAPI, *, writes_enabled: 
 
 
 
+
+def refresh_from_confirmed_order(req: dict, api: MoySkladAPI, results_dir: Path, *, writes_enabled: bool) -> dict:
+    """Reuse an already-created, approved order as the only baseline."""
+    original_id = ensure_request_id(req.get("source_order_request_id"))
+    original_file = results_dir.parent / "requests" / f"{original_id}.json"
+    result_file = results_dir / f"{original_id}.json"
+    if not original_file.is_file() or not result_file.is_file():
+        raise BridgeError("Подтверждённый исходный заказ и результат создания не найдены")
+    try:
+        source = json.loads(original_file.read_text(encoding="utf-8"))
+        result = json.loads(result_file.read_text(encoding="utf-8"))
+    except (ValueError, OSError):
+        raise BridgeError("Некорректные исходные документы") from None
+    if not isinstance(source, dict) or not isinstance(result, dict):
+        raise BridgeError("Некорректные исходные документы")
+    if source.get("action") != "create_order" or source.get("kind") != "customerorder" or source.get("confirmed") is not True:
+        raise BridgeError("Исходный заказ не является подтверждённым заказом покупателя")
+    if result.get("status") not in {"created", "already_exists"} or result.get("request_id") != original_id:
+        raise BridgeError("Нет подтверждения создания исходного заказа")
+    product_id = ensure_uuid(req.get("product_id"), "product_id")
+    expected_lines = source.get("positions")
+    if not isinstance(expected_lines, list):
+        raise BridgeError("Не найдены позиции исходного заказа")
+    targeted = [p for p in expected_lines if isinstance(p, dict)
+                and p.get("assortment_type") == "product" and p.get("assortment_id") == product_id]
+    if len(targeted) != 1:
+        raise BridgeError("Нужный товар не найден или повторяется в исходном заказе")
+    derived = dict(req)
+    derived["order_id"] = result.get("document_id")
+    derived["customer_id"] = source.get("agent_id")
+    derived["expected_order_name"] = result.get("document_name")
+    derived["expected_external_code"] = result.get("externalCode")
+    derived["expected_old_price_rub"] = targeted[0].get("price_rub")
+    derived["expected_order_total_rub"] = result.get("total_rub")
+    derived["expected_positions"] = expected_lines
+    return refresh_customer_order_line(derived, api, writes_enabled=writes_enabled, inspect_only=False)
+
+
+
 def execute(req: dict, api: MoySkladAPI, results_dir: Path, *, writes_enabled: bool = False) -> dict:
     if not isinstance(req, dict):
         raise BridgeError("Заявка должна быть JSON-объектом")
@@ -506,6 +545,8 @@ def execute(req: dict, api: MoySkladAPI, results_dir: Path, *, writes_enabled: b
         output = refresh_customer_order_line(req, api, writes_enabled=False, inspect_only=True)
     elif action == "refresh_order_price":
         output = refresh_customer_order_line(req, api, writes_enabled=writes_enabled)
+    elif action == "refresh_from_confirmed_order":
+        output = refresh_from_confirmed_order(req, api, results_dir, writes_enabled=writes_enabled)
     else:
-        raise BridgeError("action: допустимы lookup, preview_order, create_order, inspect_order_price, refresh_order_price")
+        raise BridgeError("action: допустимы lookup, preview_order, create_order, inspect_order_price, refresh_order_price, refresh_from_confirmed_order")
     return {"request_id": rid, "action": action, **output}
