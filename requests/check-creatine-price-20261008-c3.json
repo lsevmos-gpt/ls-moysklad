@@ -1,0 +1,7 @@
+{
+  "request_id": "check-creatine-price-20261008-c3",
+  "action": "lookup",
+  "entity": "product",
+  "query": "Креатина моногидрат",
+  "limit": 20
+}
