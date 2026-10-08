@@ -319,6 +319,178 @@ def do_create(req: dict, api: MoySkladAPI, results_dir: Path, *, writes_enabled:
     return result
 
 
+
+def _linked_entity_id(item: dict, entity_type: str) -> str:
+    if not isinstance(item, dict):
+        raise BridgeError(f"Отсутствует ссылка на {entity_type}")
+    meta = item.get("meta")
+    href = meta.get("href") if isinstance(meta, dict) else None
+    prefix = f"{BASE_URL}/entity/{entity_type}/"
+    if not isinstance(href, str) or not href.startswith(prefix):
+        raise BridgeError(f"Некорректная ссылка на {entity_type} в заказе")
+    return ensure_uuid(href[len(prefix):], f"{entity_type}.id")
+
+
+def _order_positions(api: MoySkladAPI, order_id: str) -> list[dict]:
+    positions = api.call("GET", f"/entity/customerorder/{order_id}/positions", params={"limit": 100})
+    rows = positions.get("rows")
+    if not isinstance(rows, list) or not 1 <= len(rows) <= 100:
+        raise BridgeError("Не удалось получить все позиции заказа")
+    size = positions.get("meta", {}).get("size") if isinstance(positions.get("meta"), dict) else None
+    if isinstance(size, int) and size != len(rows):
+        raise BridgeError("Список позиций заказа неполный; обновление отменено")
+    return rows
+
+
+def _simple_line(row: dict) -> tuple[str, str, Decimal, int, str]:
+    """Return (entity type, item id, quantity, price in kopecks, position id)."""
+    if not isinstance(row, dict):
+        raise BridgeError("Некорректная позиция заказа")
+    pos_id = ensure_uuid(row.get("id"), "position.id")
+    assort = row.get("assortment")
+    if not isinstance(assort, dict) or not isinstance(assort.get("meta"), dict):
+        raise BridgeError("Нет товара в позиции заказа")
+    kind = assort["meta"].get("type")
+    if kind not in VALID_TYPES:
+        raise BridgeError("Неподдерживаемый тип товара в заказе")
+    item_id = _linked_entity_id(assort, kind)
+    try:
+        qty = Decimal(str(row.get("quantity")))
+    except InvalidOperation:
+        raise BridgeError("Неверное количество в позиции заказа") from None
+    price = row.get("price")
+    if not qty.is_finite() or isinstance(price, bool) or not isinstance(price, int):
+        raise BridgeError("Некорректные количества или цены в позициях")
+    return kind, item_id, qty, price, pos_id
+
+
+def refresh_customer_order_line(req: dict, api: MoySkladAPI, *, writes_enabled: bool, inspect_only: bool = False) -> dict:
+    """Price update of exactly one line, keeping all other lines intact.
+
+    Refresh target price from catalog's named price type and compare with
+    an explicit approved amount. The expected full line set protects against
+    unintended edits or accidental replacement of the order.
+    """
+    if req.get("confirmed") is not True and not inspect_only:
+        raise BridgeError("Нет подтверждения пользователя на изменение цены")
+    order_id = ensure_uuid(req.get("order_id"), "order_id")
+    customer_id = ensure_uuid(req.get("customer_id"), "customer_id")
+    product_id = ensure_uuid(req.get("product_id"), "product_id")
+    expected_name = req.get("expected_order_name")
+    expected_code = req.get("expected_external_code")
+    price_type = req.get("price_type")
+    if not isinstance(expected_name, str) or not expected_name or len(expected_name) > 50:
+        raise BridgeError("Номер заказа не указан")
+    if not isinstance(expected_code, str) or not expected_code.startswith(EXTERNAL_ORDER_PREFIX) or len(expected_code) > 100:
+        raise BridgeError("Недопустимый внешний код заказа")
+    if price_type != "Опт для залов":
+        raise BridgeError("Разрешён только тип цены 'Опт для залов'")
+    old_price = to_minor_rub(req.get("expected_old_price_rub"))
+    new_price = to_minor_rub(req.get("expected_new_price_rub"))
+    old_total = to_minor_rub(req.get("expected_order_total_rub"))
+    if old_price == new_price:
+        raise BridgeError("Старая и новая цены совпадают")
+    expected = req.get("expected_positions")
+    if not isinstance(expected, list) or not 1 <= len(expected) <= 20:
+        raise BridgeError("Нужно явно указать все исходные позиции заказа")
+    expected_map = {}
+    for p in expected:
+        if not isinstance(p, dict) or p.get("assortment_type") not in VALID_TYPES:
+            raise BridgeError("Неверная позиция для проверки")
+        kind = p["assortment_type"]
+        item_id = ensure_uuid(p.get("assortment_id"), "assortment_id")
+        key = (kind, item_id)
+        if key in expected_map:
+            raise BridgeError("Повторяющиеся товары в проверяемом заказе не поддерживаются")
+        qty = to_decimal(p.get("quantity"), "quantity")
+        if qty <= 0:
+            raise BridgeError("Некорректное ожидаемое количество")
+        expected_map[key] = (qty, to_minor_rub(p.get("price_rub")))
+    target_key = ("product", product_id)
+    if target_key not in expected_map:
+        raise BridgeError("Изменяемый товар отсутствует в ожидаемых позициях")
+    if expected_map[target_key][1] != old_price:
+        raise BridgeError("Ожидаемая старая цена товара не совпадает")
+    if expected_map[target_key][0] != Decimal("1"):
+        raise BridgeError("Изменение цены допустимо только для одной единицы товара")
+
+    # Read live catalog price from the selected tier rather than trusting chat text.
+    product = api.get_entity("product", product_id)
+    sale_prices = product.get("salePrices")
+    if not isinstance(sale_prices, list):
+        raise BridgeError("Цены товара в каталоге недоступны")
+    matches = [x["value"] for x in sale_prices
+               if isinstance(x, dict) and isinstance(x.get("priceType"), dict)
+               and x["priceType"].get("name") == price_type
+               and isinstance(x.get("value"), int) and not isinstance(x.get("value"), bool)]
+    if len(matches) != 1:
+        raise BridgeError("Невозможно однозначно определить актуальную цену товара")
+    if matches[0] != new_price:
+        raise BridgeError(f"Цена каталога {fmt_rub(matches[0])} ₽ не совпадает с ожидаемой {fmt_rub(new_price)} ₽")
+
+    order = api.call("GET", f"/entity/customerorder/{order_id}")
+    if order.get("id") != order_id or order.get("name") != expected_name or order.get("externalCode") != expected_code:
+        raise BridgeError("Номер, идентификатор или внешний код заказа изменился; изменение отменено")
+    if _linked_entity_id(order.get("organization"), "organization") != CRUSH_PRO_ORGANIZATION_ID:
+        raise BridgeError("Заказ относится к другой организации")
+    if _linked_entity_id(order.get("agent"), "counterparty") != customer_id:
+        raise BridgeError("Заказ относится к другому покупателю")
+    if order.get("applicable") is not False:
+        raise BridgeError("Заказ проведён или имеет неизвестное состояние; цена не меняется")
+    rows = _order_positions(api, order_id)
+    actual = {}
+    for row in rows:
+        kind, item_id, qty, price, pos_id = _simple_line(row)
+        key = (kind, item_id)
+        if key in actual:
+            raise BridgeError("Дублированная позиция товара; изменение отменено")
+        actual[key] = (qty, price, pos_id)
+    if set(actual) != set(expected_map):
+        raise BridgeError("Состав заказа изменён после подтверждения; изменение отменено")
+    target = actual[target_key]
+    for key, (qty, price, pos_id) in actual.items():
+        expected_qty, expected_price = expected_map[key]
+        if qty != expected_qty or (price != expected_price and not (key == target_key and price == new_price)):
+            raise BridgeError("Количество или цена другой позиции заказа изменена; изменение отменено")
+    updated_total = old_total + new_price - old_price
+    current_total = order.get("sum")
+    if isinstance(current_total, bool) or not isinstance(current_total, int):
+        raise BridgeError("Невозможно подтвердить общую сумму заказа")
+    if target[1] == new_price:
+        if current_total != updated_total:
+            raise BridgeError("Цена товара уже обновлена, но итог заказа не совпадает")
+        return {"status": "already_updated", "order_name": expected_name, "order_id": order_id,
+                "product_name": product.get("name"), "old_price_rub": fmt_rub(old_price),
+                "new_price_rub": fmt_rub(new_price), "total_rub": fmt_rub(current_total),
+                "changed_positions": 0, "document_url": order.get("meta", {}).get("uuidHref")}
+    if target[1] != old_price or current_total != old_total:
+        raise BridgeError("Фактическая цена или сумма заказа отличаются от ожидаемых; изменение отменено")
+    if inspect_only:
+        return {"status": "ok", "order_name": expected_name, "order_id": order_id,
+                "product_name": product.get("name"), "old_price_rub": fmt_rub(old_price),
+                "new_price_rub": fmt_rub(new_price), "old_total_rub": fmt_rub(old_total),
+                "new_total_rub": fmt_rub(updated_total), "position_id": target[2],
+                "note": "Только проверка. Изменения в заказ не внесены."}
+    if not writes_enabled:
+        raise BridgeError("Запись в МойСклад выключена; изменение отменено")
+    endpoint = f"/entity/customerorder/{order_id}/positions/{target[2]}"
+    api.call("PUT", endpoint, body={"price": new_price})
+    # A non-idempotent network error is never blindly retried.
+    verified = api.call("GET", endpoint)
+    _, verified_id, verified_qty, verified_price, verified_pos = _simple_line(verified)
+    check_doc = api.call("GET", f"/entity/customerorder/{order_id}")
+    if verified_id != product_id or verified_qty != target[0] or verified_price != new_price or verified_pos != target[2]:
+        raise BridgeError("Ответ проверки позиции после записи отличается: проверьте заказ вручную")
+    if check_doc.get("sum") != updated_total:
+        raise BridgeError("Итог заказа после изменения отличается от ожидаемого: проверьте вручную")
+    return {"status": "updated", "order_name": expected_name, "order_id": order_id,
+            "product_name": product.get("name"), "old_price_rub": fmt_rub(old_price),
+            "new_price_rub": fmt_rub(new_price), "old_total_rub": fmt_rub(old_total),
+            "total_rub": fmt_rub(updated_total), "changed_positions": 1,
+            "document_url": check_doc.get("meta", {}).get("uuidHref")}
+
+
+
 def execute(req: dict, api: MoySkladAPI, results_dir: Path, *, writes_enabled: bool = False) -> dict:
     if not isinstance(req, dict):
         raise BridgeError("Заявка должна быть JSON-объектом")
@@ -330,6 +502,10 @@ def execute(req: dict, api: MoySkladAPI, results_dir: Path, *, writes_enabled: b
         output = build_preview(req, api)
     elif action == "create_order":
         output = do_create(req, api, results_dir, writes_enabled=writes_enabled)
+    elif action == "inspect_order_price":
+        output = refresh_customer_order_line(req, api, writes_enabled=False, inspect_only=True)
+    elif action == "refresh_order_price":
+        output = refresh_customer_order_line(req, api, writes_enabled=writes_enabled)
     else:
-        raise BridgeError("action: допустимы lookup, preview_order, create_order")
+        raise BridgeError("action: допустимы lookup, preview_order, create_order, inspect_order_price, refresh_order_price")
     return {"request_id": rid, "action": action, **output}
