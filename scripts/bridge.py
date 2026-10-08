@@ -215,11 +215,13 @@ def do_lookup(req: dict, api: MoySkladAPI) -> dict:
     term = req.get("query", "")
     if not isinstance(term, str) or len(term) > 120:
         raise BridgeError("query: строка до 120 символов")
-    if entity_type not in {"organization", "store"} and len(term.strip()) < 2:
-        raise BridgeError("Для поиска товаров/контрагентов укажи минимум 2 символа")
+    if term.strip() and len(term.strip()) < 2:
+        raise BridgeError("Поисковая строка должна содержать минимум 2 символа")
     limit = req.get("limit", 30)
     if isinstance(limit, bool) or not isinstance(limit, int) or not 1 <= limit <= 100:
         raise BridgeError("limit: целое число 1–100")
+    if not term.strip() and limit > 30:
+        raise BridgeError("Для просмотра без поисковой строки допускается не больше 30 записей")
     params = {"limit": limit}
     if term.strip():
         params["search"] = term.strip()
