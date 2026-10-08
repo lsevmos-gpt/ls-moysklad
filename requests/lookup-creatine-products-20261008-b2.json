@@ -1,0 +1,7 @@
+{
+  "request_id": "lookup-creatine-products-20261008-b2",
+  "action": "lookup",
+  "entity": "product",
+  "query": "креатин",
+  "limit": 100
+}
