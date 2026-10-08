@@ -1,0 +1,119 @@
+{
+  "request_id": "preview-gh-final-20261008-e2",
+  "action": "preview_order",
+  "status": "ok",
+  "kind": "customerorder",
+  "agent": {
+    "id": "c27d35f7-b675-11ec-0a80-092f00101c99",
+    "name": "ЛС Героев"
+  },
+  "organization": {
+    "id": "62774749-69ef-11e7-7a34-5acf0009fff7",
+    "name": "Crush-PRO"
+  },
+  "store": {
+    "id": "0652dd44-3c3a-11e8-9109-f8fc0015f6b0",
+    "name": "Основной склад"
+  },
+  "positions": [
+    {
+      "type": "variant",
+      "id": "9d94ff74-e23f-11ef-0a80-08b50035d18b",
+      "name": "Сывороточный изолят 1 кг (Банка) (Пломбир)",
+      "quantity": "2",
+      "price_rub": "2600.00",
+      "sum_rub": "5200.00"
+    },
+    {
+      "type": "variant",
+      "id": "9d830659-e23f-11ef-0a80-08b50035d15d",
+      "name": "Сывороточный изолят 1 кг (Банка) (Малина)",
+      "quantity": "1",
+      "price_rub": "2600.00",
+      "sum_rub": "2600.00"
+    },
+    {
+      "type": "variant",
+      "id": "9d91b347-e23f-11ef-0a80-08b50035d181",
+      "name": "Сывороточный изолят 1 кг (Банка) (Печенье и банан)",
+      "quantity": "1",
+      "price_rub": "2600.00",
+      "sum_rub": "2600.00"
+    },
+    {
+      "type": "variant",
+      "id": "9d9a04c1-e23f-11ef-0a80-08b50035d196",
+      "name": "Сывороточный изолят 1 кг (Банка) (Черника)",
+      "quantity": "1",
+      "price_rub": "2600.00",
+      "sum_rub": "2600.00"
+    },
+    {
+      "type": "variant",
+      "id": "c8b1a01f-6abc-11e7-7a6c-d2a900142eea",
+      "name": "Бцаа 2:1:1 200 г. (Зеленое яблоко)",
+      "quantity": "1",
+      "price_rub": "750.00",
+      "sum_rub": "750.00"
+    },
+    {
+      "type": "variant",
+      "id": "c8abb94d-6abc-11e7-7a6c-d2a900142ee2",
+      "name": "Бцаа 2:1:1 200 г. (Апельсин)",
+      "quantity": "1",
+      "price_rub": "750.00",
+      "sum_rub": "750.00"
+    },
+    {
+      "type": "variant",
+      "id": "c8b0ab55-6abc-11e7-7a6c-d2a900142ee6",
+      "name": "Бцаа 2:1:1 200 г. (Вишня)",
+      "quantity": "1",
+      "price_rub": "750.00",
+      "sum_rub": "750.00"
+    },
+    {
+      "type": "product",
+      "id": "b5d259e4-9f9f-11ed-0a80-00aa0024bc2e",
+      "name": "CRUSH PWR Предтренировочный комплекс 200 г.",
+      "quantity": "1",
+      "price_rub": "1500.00",
+      "sum_rub": "1500.00"
+    },
+    {
+      "type": "product",
+      "id": "9ec2009a-b38a-11ea-0a80-010d000866d6",
+      "name": "Креатина моногидрат 300 г.",
+      "quantity": "4",
+      "price_rub": "1300.00",
+      "sum_rub": "5200.00"
+    },
+    {
+      "type": "product",
+      "id": "3db22291-21fd-11f0-0a80-05d9001351fa",
+      "name": "Кальций с витамином D3, 600 мг, 90 капсул",
+      "quantity": "1",
+      "price_rub": "400.00",
+      "sum_rub": "400.00"
+    },
+    {
+      "type": "product",
+      "id": "7f70f7b8-b391-11ea-0a80-0495000845ca",
+      "name": "Цинк 60 таб. 25 мг в 1 таб.",
+      "quantity": "1",
+      "price_rub": "350.00",
+      "sum_rub": "350.00"
+    },
+    {
+      "type": "product",
+      "id": "14ada336-6ac0-11e7-7a31-d0fd00148c39",
+      "name": "Витамин С 60 кап. 1000 мг. в одной кап.",
+      "quantity": "1",
+      "price_rub": "350.00",
+      "sum_rub": "350.00"
+    }
+  ],
+  "total_rub": "23050.00",
+  "preview_sha256": "97baeb8968af8fc2fa86e976fe7d779913d52f883d8ebbe35b02d16d89ebc0c1",
+  "note": "Предпросмотр, в МоемСкладе документ не создан. Цена берётся из заявки и не заменяется автоматически. Остатки отдельно не проверены."
+}
