@@ -1,5 +1,5 @@
 {
   "request_id": "check-connection-20261008",
   "status": "error",
-  "message": "МойСклад API: HTTP 400 при GET /entity/store"
+  "message": "МойСклад API: HTTP 400 (API codes: 1062) при GET /entity/store"
 }
