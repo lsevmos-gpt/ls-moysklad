@@ -1,0 +1,12 @@
+{
+  "request_id": "create-gh-order-20261008-e2",
+  "action": "create_order",
+  "status": "created",
+  "kind": "customerorder",
+  "document_id": "56a49f35-c311-11f1-0a80-040300b57728",
+  "document_name": "00073",
+  "document_url": "https://online.moysklad.ru/app/#customerorder/edit?id=56a49f35-c311-11f1-0a80-040300b57728",
+  "externalCode": "CPAI-create-gh-order-20261008-e2",
+  "total_rub": "23050.00",
+  "note": "Документ создан непроведённым. Telegram, оплата, приёмка и списания не выполнялись."
+}
