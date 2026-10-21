@@ -1,0 +1,7 @@
+{
+  "request_id": "hero-isolate-variant-20261021",
+  "action": "lookup",
+  "entity": "variant",
+  "query": "изолят",
+  "limit": 70
+}

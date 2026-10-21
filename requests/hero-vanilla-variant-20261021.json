@@ -1,0 +1,7 @@
+{
+  "request_id": "hero-vanilla-variant-20261021",
+  "action": "lookup",
+  "entity": "variant",
+  "query": "ваниль",
+  "limit": 100
+}

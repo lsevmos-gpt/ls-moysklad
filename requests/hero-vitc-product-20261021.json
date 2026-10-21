@@ -1,0 +1,7 @@
+{
+  "request_id": "hero-vitc-product-20261021",
+  "action": "lookup",
+  "entity": "product",
+  "query": "витамин С",
+  "limit": 40
+}

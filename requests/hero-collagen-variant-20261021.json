@@ -1,0 +1,7 @@
+{
+  "request_id": "hero-collagen-variant-20261021",
+  "action": "lookup",
+  "entity": "variant",
+  "query": "коллаген",
+  "limit": 70
+}

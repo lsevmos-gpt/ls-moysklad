@@ -1,0 +1,7 @@
+{
+  "request_id": "hero-glucosamine-product-20261021",
+  "action": "lookup",
+  "entity": "product",
+  "query": "глюкозамин",
+  "limit": 70
+}
