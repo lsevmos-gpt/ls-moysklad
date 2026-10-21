@@ -1,0 +1,35 @@
+{
+  "request_id": "hero-magnesium-product-20261021",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "product",
+  "query": "магний",
+  "matches": [
+    {
+      "id": "b00056ae-cc78-11ec-0a80-06140070faa2",
+      "name": "Витамины Магний + В6 90 таб.",
+      "code": "00080",
+      "salePrices": [
+        {
+          "value_rub": "700.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "500.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "500.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "500.00",
+          "priceType": "Опт для залов"
+        }
+      ],
+      "buyPrice_rub": "350.00"
+    }
+  ],
+  "returned": 1,
+  "truncated": false
+}

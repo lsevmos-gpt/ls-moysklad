@@ -1,0 +1,10 @@
+{
+  "request_id": "hero-vanilla-variant-20261021",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "variant",
+  "query": "ваниль",
+  "matches": [],
+  "returned": 0,
+  "truncated": false
+}

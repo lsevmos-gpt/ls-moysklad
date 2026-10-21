@@ -1,0 +1,10 @@
+{
+  "request_id": "hero-magnesium-variant-20261021",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "variant",
+  "query": "магний",
+  "matches": [],
+  "returned": 0,
+  "truncated": false
+}

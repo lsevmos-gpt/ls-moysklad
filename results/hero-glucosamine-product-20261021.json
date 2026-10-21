@@ -1,0 +1,35 @@
+{
+  "request_id": "hero-glucosamine-product-20261021",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "product",
+  "query": "глюкозамин",
+  "matches": [
+    {
+      "id": "336e9267-6abe-11e7-7a34-5acf0013b601",
+      "name": "Глюкозамин хондроитин МСМ 1000 мг 120 капсул",
+      "code": "00005",
+      "salePrices": [
+        {
+          "value_rub": "950.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "800.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "800.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "800.00",
+          "priceType": "Опт для залов"
+        }
+      ],
+      "buyPrice_rub": "500.00"
+    }
+  ],
+  "returned": 1,
+  "truncated": false
+}

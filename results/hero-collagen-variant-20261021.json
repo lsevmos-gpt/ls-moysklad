@@ -1,0 +1,57 @@
+{
+  "request_id": "hero-collagen-variant-20261021",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "variant",
+  "query": "коллаген",
+  "matches": [
+    {
+      "id": "ce15f055-7acb-11ec-0a80-02c8001144f1",
+      "name": "Коллаген с витамином С 200 г. (Вишня)",
+      "code": "00090",
+      "salePrices": [
+        {
+          "value_rub": "850.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "800.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "750.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "700.00",
+          "priceType": "Опт для залов"
+        }
+      ]
+    },
+    {
+      "id": "ce1caf6a-7acb-11ec-0a80-02c8001144fe",
+      "name": "Коллаген с витамином С 200 г. (Персик)",
+      "code": "00091",
+      "salePrices": [
+        {
+          "value_rub": "850.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "800.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "750.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "700.00",
+          "priceType": "Опт для залов"
+        }
+      ]
+    }
+  ],
+  "returned": 2,
+  "truncated": false
+}
