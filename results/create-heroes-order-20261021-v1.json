@@ -1,0 +1,12 @@
+{
+  "request_id": "create-heroes-order-20261021-v1",
+  "action": "create_order",
+  "status": "created",
+  "kind": "customerorder",
+  "document_id": "eab549d9-cd50-11f1-0a80-03be007edc83",
+  "document_name": "00078",
+  "document_url": "https://online.moysklad.ru/app/#customerorder/edit?id=eab549d9-cd50-11f1-0a80-03be007edc83",
+  "externalCode": "CPAI-create-heroes-order-20261021-v1",
+  "total_rub": "13600.00",
+  "note": "Документ создан непроведённым. Telegram, оплата, приёмка и списания не выполнялись."
+}
