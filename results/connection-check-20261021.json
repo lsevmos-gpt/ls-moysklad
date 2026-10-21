@@ -1,5 +1,15 @@
 {
   "request_id": "connection-check-20261021",
-  "status": "error",
-  "message": "МойСклад API: HTTP 401 (API codes: 1056) при GET /entity/store"
+  "action": "lookup",
+  "status": "ok",
+  "entity": "store",
+  "query": "",
+  "matches": [
+    {
+      "id": "0652dd44-3c3a-11e8-9109-f8fc0015f6b0",
+      "name": "Основной склад"
+    }
+  ],
+  "returned": 1,
+  "truncated": false
 }
