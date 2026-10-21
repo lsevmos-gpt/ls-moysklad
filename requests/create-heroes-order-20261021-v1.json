@@ -1,0 +1,60 @@
+{
+  "request_id": "create-heroes-order-20261021-v1",
+  "action": "create_order",
+  "kind": "customerorder",
+  "agent_id": "c27d35f7-b675-11ec-0a80-092f00101c99",
+  "store_id": "0652dd44-3c3a-11e8-9109-f8fc0015f6b0",
+  "description": "Crush-PRO. Заказ покупателя ЛС Героев. Изолят 1 кг: Пломбир 2 шт. вместо отсутствующей в каталоге Ванили, Молочный шоколад 1 шт., Клубника 1 шт. Коллаген с витамином С 200 г. Персик 1 шт.; Цинк 1 шт.; Магний + В6 2 шт.; Витамин С 1 шт.; Глюкозамин хондроитин МСМ 1 шт. Цены: Опт для залов.",
+  "positions": [
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d94ff74-e23f-11ef-0a80-08b50035d18b",
+      "quantity": "2",
+      "price_rub": "2600.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d8af0ad-e23f-11ef-0a80-08b50035d16f",
+      "quantity": "1",
+      "price_rub": "2600.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d7f6fab-e23f-11ef-0a80-08b50035d154",
+      "quantity": "1",
+      "price_rub": "2600.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "ce1caf6a-7acb-11ec-0a80-02c8001144fe",
+      "quantity": "1",
+      "price_rub": "700.00"
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "7f70f7b8-b391-11ea-0a80-0495000845ca",
+      "quantity": "1",
+      "price_rub": "350.00"
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "b00056ae-cc78-11ec-0a80-06140070faa2",
+      "quantity": "2",
+      "price_rub": "500.00"
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "14ada336-6ac0-11e7-7a31-d0fd00148c39",
+      "quantity": "1",
+      "price_rub": "350.00"
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "336e9267-6abe-11e7-7a34-5acf0013b601",
+      "quantity": "1",
+      "price_rub": "800.00"
+    }
+  ],
+  "confirmed": true,
+  "approved_preview_id": "preview-heroes-order-20261021-v1"
+}
