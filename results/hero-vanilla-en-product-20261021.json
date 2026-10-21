@@ -1,0 +1,10 @@
+{
+  "request_id": "hero-vanilla-en-product-20261021",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "product",
+  "query": "Vanilla",
+  "matches": [],
+  "returned": 0,
+  "truncated": false
+}
