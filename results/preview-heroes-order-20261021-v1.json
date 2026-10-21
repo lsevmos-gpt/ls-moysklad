@@ -1,0 +1,87 @@
+{
+  "request_id": "preview-heroes-order-20261021-v1",
+  "action": "preview_order",
+  "status": "ok",
+  "kind": "customerorder",
+  "agent": {
+    "id": "c27d35f7-b675-11ec-0a80-092f00101c99",
+    "name": "ЛС Героев"
+  },
+  "organization": {
+    "id": "62774749-69ef-11e7-7a34-5acf0009fff7",
+    "name": "Crush-PRO"
+  },
+  "store": {
+    "id": "0652dd44-3c3a-11e8-9109-f8fc0015f6b0",
+    "name": "Основной склад"
+  },
+  "positions": [
+    {
+      "type": "variant",
+      "id": "9d94ff74-e23f-11ef-0a80-08b50035d18b",
+      "name": "Сывороточный изолят 1 кг (Банка) (Пломбир)",
+      "quantity": "2",
+      "price_rub": "2600.00",
+      "sum_rub": "5200.00"
+    },
+    {
+      "type": "variant",
+      "id": "9d8af0ad-e23f-11ef-0a80-08b50035d16f",
+      "name": "Сывороточный изолят 1 кг (Банка) (Молочный шоколад)",
+      "quantity": "1",
+      "price_rub": "2600.00",
+      "sum_rub": "2600.00"
+    },
+    {
+      "type": "variant",
+      "id": "9d7f6fab-e23f-11ef-0a80-08b50035d154",
+      "name": "Сывороточный изолят 1 кг (Банка) (Клубника)",
+      "quantity": "1",
+      "price_rub": "2600.00",
+      "sum_rub": "2600.00"
+    },
+    {
+      "type": "variant",
+      "id": "ce1caf6a-7acb-11ec-0a80-02c8001144fe",
+      "name": "Коллаген с витамином С 200 г. (Персик)",
+      "quantity": "1",
+      "price_rub": "700.00",
+      "sum_rub": "700.00"
+    },
+    {
+      "type": "product",
+      "id": "7f70f7b8-b391-11ea-0a80-0495000845ca",
+      "name": "Цинк 60 таб. 25 мг в 1 таб.",
+      "quantity": "1",
+      "price_rub": "350.00",
+      "sum_rub": "350.00"
+    },
+    {
+      "type": "product",
+      "id": "b00056ae-cc78-11ec-0a80-06140070faa2",
+      "name": "Витамины Магний + В6 90 таб.",
+      "quantity": "2",
+      "price_rub": "500.00",
+      "sum_rub": "1000.00"
+    },
+    {
+      "type": "product",
+      "id": "14ada336-6ac0-11e7-7a31-d0fd00148c39",
+      "name": "Витамин С 60 кап. 1000 мг. в одной кап.",
+      "quantity": "1",
+      "price_rub": "350.00",
+      "sum_rub": "350.00"
+    },
+    {
+      "type": "product",
+      "id": "336e9267-6abe-11e7-7a34-5acf0013b601",
+      "name": "Глюкозамин хондроитин МСМ 1000 мг 120 капсул",
+      "quantity": "1",
+      "price_rub": "800.00",
+      "sum_rub": "800.00"
+    }
+  ],
+  "total_rub": "13600.00",
+  "preview_sha256": "12658af6eecd967ebda64be03ce82c7570c8e8186d35ad5b8e019cee3b494e2c",
+  "note": "Предпросмотр, в МоемСкладе документ не создан. Цена берётся из заявки и не заменяется автоматически. Остатки отдельно не проверены."
+}
