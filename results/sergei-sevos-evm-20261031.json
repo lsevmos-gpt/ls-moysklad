@@ -1,0 +1,10 @@
+{
+  "request_id": "sergei-sevos-evm-20261031",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "counterparty",
+  "query": "Evm",
+  "matches": [],
+  "returned": 0,
+  "truncated": false
+}
