@@ -1,0 +1,5 @@
+{
+  "request_id": "inspect-three-orders-supplier-20261031-v1",
+  "action": "inspect_consolidated_supply",
+  "kind": "purchaseorder"
+}
