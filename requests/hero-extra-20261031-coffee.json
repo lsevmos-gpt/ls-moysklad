@@ -1,0 +1,7 @@
+{
+  "request_id": "hero-extra-20261031-coffee",
+  "action": "lookup",
+  "entity": "variant",
+  "query": "Капучино",
+  "limit": 100
+}
