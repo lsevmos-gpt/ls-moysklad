@@ -1,0 +1,58 @@
+{
+  "request_id": "audit-konnaya-supplier-20261031-v1",
+  "action": "audit_three_orders",
+  "status": "ok",
+  "customer_orders": {
+    "heroes": {
+      "number": "00078",
+      "amount_rub": "19950.00",
+      "line_count": 11,
+      "units": "15.0",
+      "applicable": true,
+      "matches_requested": true,
+      "differences": []
+    },
+    "sergey": {
+      "number": "00079",
+      "amount_rub": "54000.00",
+      "line_count": 8,
+      "units": "20.0",
+      "applicable": true,
+      "matches_requested": true,
+      "differences": []
+    },
+    "konnaya": {
+      "number": "00080",
+      "amount_rub": "10500.00",
+      "line_count": 7,
+      "units": "10.0",
+      "applicable": false,
+      "matches_requested": false,
+      "differences": [
+        {
+          "assortment_type": "variant",
+          "assortment_id": "3119b90a-b38d-11ea-0a80-010d00088608",
+          "expected_quantity": "1",
+          "actual_quantity": null,
+          "expected_price_rub": "1100.00",
+          "actual_price_rub": null
+        }
+      ]
+    }
+  },
+  "konnaya_expected_units": "11",
+  "konnaya_expected_total_rub": "11600.00",
+  "supplier": {
+    "number": "00031",
+    "agent": "ООО \"КРАШ КОМПАНИ\"",
+    "amount_rub": "62950.00",
+    "line_count": 23,
+    "units": "46.0",
+    "applicable": false,
+    "matches_original_purchase_order": true,
+    "original_order_differences": [],
+    "matches_three_requested_orders": true,
+    "quantity_differences": []
+  },
+  "note": "Проверены реальные записи 00078, 00079, 00080, 00031 в МойСклад; действие только для чтения."
+}
