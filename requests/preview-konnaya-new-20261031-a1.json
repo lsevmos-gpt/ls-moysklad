@@ -1,0 +1,52 @@
+{
+  "request_id": "preview-konnaya-new-20261031-a1",
+  "action": "preview_order",
+  "kind": "customerorder",
+  "agent_id": "ba5b8eb5-d7e0-11ef-0a80-008d004045c0",
+  "store_id": "0652dd44-3c3a-11e8-9109-f8fc0015f6b0",
+  "description": "Crush-PRO. Заказ покупателя ЛС Конная. Цитруллин малат 200 г (вкус не указан) 2 шт; CRUSH PWR Предтренировочный комплекс 200 г 2 шт; Бцаа 2:1:1 200 г Зеленое яблоко 1 шт, Клубника 1 шт; Коллаген с витамином С 200 г Вишня 1 шт; Изотоник 900 г Малина 1 шт; Омега-3 180 капсул 2 шт. Цены: Опт для залов. Дополнительно запрошен изотоник 900 г Вишня 1 шт: нет такой позиции в каталоге, НЕ включен в заказ и сумму. Требует дополнительного согласования.",
+  "positions": [
+    {
+      "assortment_type": "product",
+      "assortment_id": "ae866e0b-6abf-11e7-7a69-9711000a2cae",
+      "quantity": "2",
+      "price_rub": "900.00"
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "b5d259e4-9f9f-11ed-0a80-00aa0024bc2e",
+      "quantity": "2",
+      "price_rub": "1500.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "c8b1a01f-6abc-11e7-7a6c-d2a900142eea",
+      "quantity": "1",
+      "price_rub": "750.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "32169bbb-7f01-11ee-0a80-13c60013abcc",
+      "quantity": "1",
+      "price_rub": "750.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "ce15f055-7acb-11ec-0a80-02c8001144f1",
+      "quantity": "1",
+      "price_rub": "700.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "3119b90a-b38d-11ea-0a80-010d00088608",
+      "quantity": "1",
+      "price_rub": "1100.00"
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "69d03c56-84ce-11ec-0a80-02f9001b756c",
+      "quantity": "2",
+      "price_rub": "1200.00"
+    }
+  ]
+}
