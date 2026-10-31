@@ -156,18 +156,34 @@ def inspect_consolidated_supply(req, api, results_dir):
                 else:
                     expected[key] = (qty, price)
         live = _actual_order_lines(api, order_id)
+        changed = []
         if live != expected:
-            raise BridgeError("Состав текущего заказа отличается от подтвержденного: " + label)
-        expected_minor = _price_minor(expected_total)
-        if not isinstance(doc.get("sum"), (int, float)) or doc.get("sum") != expected_minor:
-            raise BridgeError("Сумма текущего заказа отличается от подтвержденной: " + label)
+            for key in sorted(set(live) | set(expected)):
+                before = expected.get(key)
+                after = live.get(key)
+                if before != after:
+                    changed.append({
+                        "assortment_type": key[0], "assortment_id": key[1],
+                        "expected_quantity": str(before[0]) if before else None,
+                        "actual_quantity": str(after[0]) if after else None,
+                        "expected_price_rub": fmt_rub(before[1]) if before else None,
+                        "actual_price_rub": fmt_rub(after[1]) if after else None,
+                    })
+        actual_minor = sum((qty * price for qty, price in live.values()), Decimal(0))
+        if (not isinstance(doc.get("sum"), (int, float))
+            or isinstance(doc.get("sum"), bool)
+            or doc.get("sum") != actual_minor):
+            raise BridgeError("Сумма текущего заказа не соответствует позициям: " + label)
         for key, (qty, _sale_price) in live.items():
             by_source = entries.setdefault(key, {"quantity": Decimal(0), "sources": {}})
             by_source["quantity"] += qty
             by_source["sources"][label] = str(qty)
         snapshots.append({"label": label, "order_name": doc.get("name"),
-                          "total_rub": expected_total, "positions": len(live),
-                          "units": str(sum((v[0] for v in live.values()), Decimal(0)))})
+                          "total_rub": fmt_rub(actual_minor),
+                          "original_total_rub": expected_total,
+                          "positions": len(live),
+                          "units": str(sum((v[0] for v in live.values()), Decimal(0))),
+                          "changes_from_original": changed})
     history_prices, history_docs = _history_prices(api)
     rows = []
     for (typ, pid), data in entries.items():
@@ -193,12 +209,12 @@ def inspect_consolidated_supply(req, api, results_dir):
         })
     rows.sort(key=lambda row: (row["assortment_type"], row["name"] or ""))
     qty = sum((int(Decimal(r["quantity"])) for r in rows), 0)
-    if qty != 45 or len(rows) != 22:
-        raise BridgeError("Итоговое количество или число позиций изменилось; требуется перепроверка")
+    changed_sources = [x["label"] for x in snapshots if x["changes_from_original"]]
     return {
         "status": "ok", "supplier": {"id": SUPPLIER_ID, "name": 'ООО "КРАШ КОМПАНИ"'},
         "source_orders": snapshots, "rows": rows, "total_quantity": qty,
-        "unique_positions": len(rows), "purchase_history_checked": history_docs,
+        "unique_positions": len(rows), "changed_sources": changed_sources,
+        "purchase_history_checked": history_docs,
         "missing_requested_item": "Изотоник Вишня 1 шт. отсутствует в каталоге и заказе Конной.",
         "note": "Проверено с реальными позициями и суммами трех текущих заказов. Текущие цены закупки и прошлые цены показаны раздельно. Никакой документ не создан."
     }
