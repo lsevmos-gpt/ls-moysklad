@@ -1,0 +1,10 @@
+{
+  "request_id": "konnaya-20261031-cherry-all-p",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "product",
+  "query": "Вишня",
+  "matches": [],
+  "returned": 0,
+  "truncated": false
+}
