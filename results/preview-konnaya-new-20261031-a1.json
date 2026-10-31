@@ -1,0 +1,79 @@
+{
+  "request_id": "preview-konnaya-new-20261031-a1",
+  "action": "preview_order",
+  "status": "ok",
+  "kind": "customerorder",
+  "agent": {
+    "id": "ba5b8eb5-d7e0-11ef-0a80-008d004045c0",
+    "name": "ЛС Конная"
+  },
+  "organization": {
+    "id": "62774749-69ef-11e7-7a34-5acf0009fff7",
+    "name": "Crush-PRO"
+  },
+  "store": {
+    "id": "0652dd44-3c3a-11e8-9109-f8fc0015f6b0",
+    "name": "Основной склад"
+  },
+  "positions": [
+    {
+      "type": "product",
+      "id": "ae866e0b-6abf-11e7-7a69-9711000a2cae",
+      "name": "Цитруллин малат 200 г.",
+      "quantity": "2",
+      "price_rub": "900.00",
+      "sum_rub": "1800.00"
+    },
+    {
+      "type": "product",
+      "id": "b5d259e4-9f9f-11ed-0a80-00aa0024bc2e",
+      "name": "CRUSH PWR Предтренировочный комплекс 200 г.",
+      "quantity": "2",
+      "price_rub": "1500.00",
+      "sum_rub": "3000.00"
+    },
+    {
+      "type": "variant",
+      "id": "c8b1a01f-6abc-11e7-7a6c-d2a900142eea",
+      "name": "Бцаа 2:1:1 200 г. (Зеленое яблоко)",
+      "quantity": "1",
+      "price_rub": "750.00",
+      "sum_rub": "750.00"
+    },
+    {
+      "type": "variant",
+      "id": "32169bbb-7f01-11ee-0a80-13c60013abcc",
+      "name": "Бцаа 2:1:1 200 г. (Клубника)",
+      "quantity": "1",
+      "price_rub": "750.00",
+      "sum_rub": "750.00"
+    },
+    {
+      "type": "variant",
+      "id": "ce15f055-7acb-11ec-0a80-02c8001144f1",
+      "name": "Коллаген с витамином С 200 г. (Вишня)",
+      "quantity": "1",
+      "price_rub": "700.00",
+      "sum_rub": "700.00"
+    },
+    {
+      "type": "variant",
+      "id": "3119b90a-b38d-11ea-0a80-010d00088608",
+      "name": "Изотоник витаминно - минеральный 900 г. (банка) (Малина)",
+      "quantity": "1",
+      "price_rub": "1100.00",
+      "sum_rub": "1100.00"
+    },
+    {
+      "type": "product",
+      "id": "69d03c56-84ce-11ec-0a80-02f9001b756c",
+      "name": "Омега - 3 (рыбный жир) 1000 мг 180 капсул",
+      "quantity": "2",
+      "price_rub": "1200.00",
+      "sum_rub": "2400.00"
+    }
+  ],
+  "total_rub": "10500.00",
+  "preview_sha256": "bd5f2d144f34b903e0402117541ff9ebec8ca3e2c9f641a2585fb999c24398cc",
+  "note": "Предпросмотр, в МоемСкладе документ не создан. Цена берётся из заявки и не заменяется автоматически. Остатки отдельно не проверены."
+}
