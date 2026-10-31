@@ -1,0 +1,12 @@
+{
+  "request_id": "create-konnaya-new-20261031-a1",
+  "action": "create_order",
+  "status": "created",
+  "kind": "customerorder",
+  "document_id": "828f653a-d515-11f1-0a80-197c00664bed",
+  "document_name": "00080",
+  "document_url": "https://online.moysklad.ru/app/#customerorder/edit?id=828f653a-d515-11f1-0a80-197c00664bed",
+  "externalCode": "CPAI-create-konnaya-new-20261031-a1",
+  "total_rub": "10500.00",
+  "note": "Документ создан непроведённым. Telegram, оплата, приёмка и списания не выполнялись."
+}
