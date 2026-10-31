@@ -1,0 +1,150 @@
+{
+  "request_id": "create-supplier-three-20261031-v1",
+  "action": "create_order",
+  "kind": "purchaseorder",
+  "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+  "store_id": "0652dd44-3c3a-11e8-9109-f8fc0015f6b0",
+  "description": "Crush-PRO. Один консолидированный заказ поставщику ООО «КРАШ КОМПАНИ» по заказам покупателей: ЛС Героев №00078 (включая дополнения 31.10), Сергей Севастополь №00079, ЛС Конная №00080. Товары объединены по UUID без дублирования. Изотоник Вишня 1 шт. взят из обновленного заказа Конной. Изотоник Малина 1 шт. включен дополнительно по первоначальной заявке Конной (в ее текущем заказе был заменен Вишней). Цены закупки из карточек товаров, их родительских товаров и проверенной истории закупок. Всего 46 шт., 23 позиции.",
+  "positions": [
+    {
+      "assortment_type": "product",
+      "assortment_id": "b5d259e4-9f9f-11ed-0a80-00aa0024bc2e",
+      "quantity": "2",
+      "price_rub": "1000.00"
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "098e730e-97f3-11ec-0a80-099a0023cbf3",
+      "quantity": "2",
+      "price_rub": "250.00"
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "14ada336-6ac0-11e7-7a31-d0fd00148c39",
+      "quantity": "1",
+      "price_rub": "250.00"
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "b00056ae-cc78-11ec-0a80-06140070faa2",
+      "quantity": "2",
+      "price_rub": "350.00"
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "336e9267-6abe-11e7-7a34-5acf0013b601",
+      "quantity": "1",
+      "price_rub": "500.00"
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "69d03c56-84ce-11ec-0a80-02f9001b756c",
+      "quantity": "2",
+      "price_rub": "850.00"
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "7f70f7b8-b391-11ea-0a80-0495000845ca",
+      "quantity": "2",
+      "price_rub": "250.00"
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "ae866e0b-6abf-11e7-7a69-9711000a2cae",
+      "quantity": "2",
+      "price_rub": "700.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "c8b1a01f-6abc-11e7-7a6c-d2a900142eea",
+      "quantity": "1",
+      "price_rub": "500.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "32169bbb-7f01-11ee-0a80-13c60013abcc",
+      "quantity": "1",
+      "price_rub": "500.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "0887cbad-d517-11f1-0a80-1d670026da7c",
+      "quantity": "1",
+      "price_rub": "700.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "ce15f055-7acb-11ec-0a80-02c8001144f1",
+      "quantity": "1",
+      "price_rub": "500.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "ce1caf6a-7acb-11ec-0a80-02c8001144fe",
+      "quantity": "1",
+      "price_rub": "500.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d7bdfc3-e23f-11ef-0a80-08b50035d14b",
+      "quantity": "1",
+      "price_rub": "2000.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d7f6fab-e23f-11ef-0a80-08b50035d154",
+      "quantity": "4",
+      "price_rub": "2000.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d830659-e23f-11ef-0a80-08b50035d15d",
+      "quantity": "2",
+      "price_rub": "2000.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d86de19-e23f-11ef-0a80-08b50035d166",
+      "quantity": "1",
+      "price_rub": "2000.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d8af0ad-e23f-11ef-0a80-08b50035d16f",
+      "quantity": "3",
+      "price_rub": "2000.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d8e6de9-e23f-11ef-0a80-08b50035d178",
+      "quantity": "2",
+      "price_rub": "2000.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d91b347-e23f-11ef-0a80-08b50035d181",
+      "quantity": "4",
+      "price_rub": "2000.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d94ff74-e23f-11ef-0a80-08b50035d18b",
+      "quantity": "5",
+      "price_rub": "2000.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d9a04c1-e23f-11ef-0a80-08b50035d196",
+      "quantity": "4",
+      "price_rub": "2000.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "3119b90a-b38d-11ea-0a80-010d00088608",
+      "quantity": "1",
+      "price_rub": "700.00"
+    }
+  ],
+  "confirmed": true,
+  "approved_preview_id": "preview-supplier-three-20261031-v1"
+}
