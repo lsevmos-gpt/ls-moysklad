@@ -1,0 +1,7 @@
+{
+  "request_id": "tsarapin-20261031-client",
+  "action": "lookup",
+  "entity": "counterparty",
+  "query": "Царап",
+  "limit": 100
+}
