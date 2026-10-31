@@ -1,0 +1,35 @@
+{
+  "request_id": "konnaya-20261031-cit-p",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "product",
+  "query": "Цитруллин",
+  "matches": [
+    {
+      "id": "ae866e0b-6abf-11e7-7a69-9711000a2cae",
+      "name": "Цитруллин малат 200 г.",
+      "code": "00008",
+      "salePrices": [
+        {
+          "value_rub": "1200.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "1200.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "1000.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "900.00",
+          "priceType": "Опт для залов"
+        }
+      ],
+      "buyPrice_rub": "700.00"
+    }
+  ],
+  "returned": 1,
+  "truncated": false
+}

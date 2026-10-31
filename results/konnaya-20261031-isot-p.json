@@ -1,0 +1,35 @@
+{
+  "request_id": "konnaya-20261031-isot-p",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "product",
+  "query": "Изотоник",
+  "matches": [
+    {
+      "id": "f973c088-25ed-11e9-9ff4-31500001e115",
+      "name": "Изотоник витаминно - минеральный 900 г. (банка)",
+      "code": "00030",
+      "salePrices": [
+        {
+          "value_rub": "1400.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "1200.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "1200.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "1100.00",
+          "priceType": "Опт для залов"
+        }
+      ],
+      "buyPrice_rub": "700.00"
+    }
+  ],
+  "returned": 1,
+  "truncated": false
+}

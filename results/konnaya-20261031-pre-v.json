@@ -1,0 +1,10 @@
+{
+  "request_id": "konnaya-20261031-pre-v",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "variant",
+  "query": "Предтрен",
+  "matches": [],
+  "returned": 0,
+  "truncated": false
+}

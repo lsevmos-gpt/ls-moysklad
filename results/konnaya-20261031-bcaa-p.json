@@ -1,0 +1,10 @@
+{
+  "request_id": "konnaya-20261031-bcaa-p",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "product",
+  "query": "BCAA",
+  "matches": [],
+  "returned": 0,
+  "truncated": false
+}

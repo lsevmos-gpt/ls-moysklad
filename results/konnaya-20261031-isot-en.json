@@ -1,0 +1,10 @@
+{
+  "request_id": "konnaya-20261031-isot-en",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "product",
+  "query": "Isotonic",
+  "matches": [],
+  "returned": 0,
+  "truncated": false
+}

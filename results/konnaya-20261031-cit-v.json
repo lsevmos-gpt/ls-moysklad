@@ -1,0 +1,80 @@
+{
+  "request_id": "konnaya-20261031-cit-v",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "variant",
+  "query": "Цитруллин",
+  "matches": [
+    {
+      "id": "ae2bcbc4-8b20-11ef-0a80-076200013b00",
+      "name": "Цитруллин малат 200 г. (Апельсин)",
+      "code": "00124",
+      "salePrices": [
+        {
+          "value_rub": "1200.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "1200.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "1000.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "900.00",
+          "priceType": "Опт для залов"
+        }
+      ]
+    },
+    {
+      "id": "ae303e03-8b20-11ef-0a80-076200013b08",
+      "name": "Цитруллин малат 200 г. (Вишня)",
+      "code": "00125",
+      "salePrices": [
+        {
+          "value_rub": "1200.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "1200.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "1000.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "900.00",
+          "priceType": "Опт для залов"
+        }
+      ]
+    },
+    {
+      "id": "c2d46374-8b20-11ef-0a80-018f00011567",
+      "name": "Цитруллин малат 200 г. (без вкуса)",
+      "code": "00127",
+      "salePrices": [
+        {
+          "value_rub": "1200.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "1200.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "1000.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "900.00",
+          "priceType": "Опт для залов"
+        }
+      ]
+    }
+  ],
+  "returned": 3,
+  "truncated": false
+}

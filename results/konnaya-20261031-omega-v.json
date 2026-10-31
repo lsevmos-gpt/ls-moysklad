@@ -1,0 +1,10 @@
+{
+  "request_id": "konnaya-20261031-omega-v",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "variant",
+  "query": "Омега",
+  "matches": [],
+  "returned": 0,
+  "truncated": false
+}

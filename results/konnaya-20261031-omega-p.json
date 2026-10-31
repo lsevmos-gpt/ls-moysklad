@@ -1,0 +1,35 @@
+{
+  "request_id": "konnaya-20261031-omega-p",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "product",
+  "query": "Омега",
+  "matches": [
+    {
+      "id": "69d03c56-84ce-11ec-0a80-02f9001b756c",
+      "name": "Омега - 3 (рыбный жир) 1000 мг 180 капсул",
+      "code": "00077",
+      "salePrices": [
+        {
+          "value_rub": "1300.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "1200.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "1200.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "1200.00",
+          "priceType": "Опт для залов"
+        }
+      ],
+      "buyPrice_rub": "850.00"
+    }
+  ],
+  "returned": 1,
+  "truncated": false
+}
