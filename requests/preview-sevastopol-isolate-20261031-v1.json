@@ -1,0 +1,58 @@
+{
+  "request_id": "preview-sevastopol-isolate-20261031-v1",
+  "action": "preview_order",
+  "kind": "customerorder",
+  "agent_id": "6523171d-2557-11ee-0a80-07f8000cd58d",
+  "store_id": "0652dd44-3c3a-11e8-9109-f8fc0015f6b0",
+  "description": "ПРЕДПРОСМОТР, НЕ СОЗДАВАТЬ БЕЗ ПОДТВЕРЖДЕНИЯ. Покупатель Сергей Севастополь (Серёга Севос), изолят 1 кг банка: заказ 20 шт., ваниль 3 — Пломбир 3? голубка/голубика 3 — Черника 3? Остальные вкусы: молочный шоколад 2, персик 2, манго 1, печенье и банан 4, малина 2, клубника 3. Предварительная цена Оптовая цена 2700 ₽/шт.; заменить только после согласования.",
+  "positions": [
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d94ff74-e23f-11ef-0a80-08b50035d18b",
+      "quantity": "3",
+      "price_rub": "2700.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d8af0ad-e23f-11ef-0a80-08b50035d16f",
+      "quantity": "2",
+      "price_rub": "2700.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d9a04c1-e23f-11ef-0a80-08b50035d196",
+      "quantity": "3",
+      "price_rub": "2700.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d8e6de9-e23f-11ef-0a80-08b50035d178",
+      "quantity": "2",
+      "price_rub": "2700.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d86de19-e23f-11ef-0a80-08b50035d166",
+      "quantity": "1",
+      "price_rub": "2700.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d91b347-e23f-11ef-0a80-08b50035d181",
+      "quantity": "4",
+      "price_rub": "2700.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d830659-e23f-11ef-0a80-08b50035d15d",
+      "quantity": "2",
+      "price_rub": "2700.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d7f6fab-e23f-11ef-0a80-08b50035d154",
+      "quantity": "3",
+      "price_rub": "2700.00"
+    }
+  ]
+}
