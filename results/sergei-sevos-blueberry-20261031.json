@@ -1,0 +1,10 @@
+{
+  "request_id": "sergei-sevos-blueberry-20261031",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "variant",
+  "query": "Голуб",
+  "matches": [],
+  "returned": 0,
+  "truncated": false
+}
