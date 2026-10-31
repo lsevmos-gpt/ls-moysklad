@@ -192,7 +192,7 @@ def inspect_consolidated_supply(req, api, results_dir):
             "last_purchase_order": history["order_name"] if history else None
         })
     rows.sort(key=lambda row: (row["assortment_type"], row["name"] or ""))
-    qty = sum((int(r["quantity"]) for r in rows), 0)
+    qty = sum((int(Decimal(r["quantity"])) for r in rows), 0)
     if qty != 45 or len(rows) != 22:
         raise BridgeError("Итоговое количество или число позиций изменилось; требуется перепроверка")
     return {
