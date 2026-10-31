@@ -1,0 +1,7 @@
+{
+  "request_id": "sergei-sevos-sergey-20261031",
+  "action": "lookup",
+  "entity": "counterparty",
+  "query": "Сергей Севастополь",
+  "limit": 100
+}
