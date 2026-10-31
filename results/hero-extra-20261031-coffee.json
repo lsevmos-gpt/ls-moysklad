@@ -1,0 +1,57 @@
+{
+  "request_id": "hero-extra-20261031-coffee",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "variant",
+  "query": "Капучино",
+  "matches": [
+    {
+      "id": "75874399-b868-11ea-0a80-094d001276f3",
+      "name": "Казеин 1000 г. (Банка) (Ирландский капучино)",
+      "code": "00071",
+      "salePrices": [
+        {
+          "value_rub": "2600.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "2500.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "2500.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "2500.00",
+          "priceType": "Опт для залов"
+        }
+      ]
+    },
+    {
+      "id": "9d7bdfc3-e23f-11ef-0a80-08b50035d14b",
+      "name": "Сывороточный изолят 1 кг (Банка) (Ирландский капучино)",
+      "code": "00130",
+      "salePrices": [
+        {
+          "value_rub": "3000.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "2700.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "2700.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "2600.00",
+          "priceType": "Опт для залов"
+        }
+      ]
+    }
+  ],
+  "returned": 2,
+  "truncated": false
+}
