@@ -1,0 +1,7 @@
+{
+  "request_id": "hero-extra-20261031-blu",
+  "action": "lookup",
+  "entity": "variant",
+  "query": "Черника",
+  "limit": 100
+}
