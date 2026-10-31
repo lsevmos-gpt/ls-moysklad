@@ -1,0 +1,34 @@
+{
+  "request_id": "inspect-add-heroes-20261031-a1",
+  "action": "inspect_order_additions",
+  "source_order_request_id": "create-heroes-order-20261021-v1",
+  "expected_order_name": "00078",
+  "expected_old_total_rub": "13600.00",
+  "price_type": "Опт для залов",
+  "additions": [
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d7bdfc3-e23f-11ef-0a80-08b50035d14b",
+      "quantity": "1",
+      "price_rub": "2600.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d9a04c1-e23f-11ef-0a80-08b50035d196",
+      "quantity": "1",
+      "price_rub": "2600.00"
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "7f70f7b8-b391-11ea-0a80-0495000845ca",
+      "quantity": "1",
+      "price_rub": "350.00"
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "098e730e-97f3-11ec-0a80-099a0023cbf3",
+      "quantity": "2",
+      "price_rub": "400.00"
+    }
+  ]
+}
