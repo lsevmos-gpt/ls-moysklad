@@ -1,0 +1,5 @@
+{
+  "request_id": "inspect-three-orders-supplier-20261031-v1",
+  "status": "error",
+  "message": "invalid literal for int() with base 10: '2.0'"
+}
