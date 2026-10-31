@@ -1,0 +1,7 @@
+{
+  "request_id": "sergei-sevos-ser-20261031",
+  "action": "lookup",
+  "entity": "counterparty",
+  "query": "Сер",
+  "limit": 100
+}
