@@ -1,0 +1,12 @@
+{
+  "request_id": "create-sevastopol-isolate-20261031-v2",
+  "action": "create_order",
+  "status": "created",
+  "kind": "customerorder",
+  "document_id": "66393a40-d50f-11f1-0a80-10b60064aee0",
+  "document_name": "00079",
+  "document_url": "https://online.moysklad.ru/app/#customerorder/edit?id=66393a40-d50f-11f1-0a80-10b60064aee0",
+  "externalCode": "CPAI-create-sevastopol-isolate-20261031-v2",
+  "total_rub": "54000.00",
+  "note": "Документ создан непроведённым. Telegram, оплата, приёмка и списания не выполнялись."
+}
