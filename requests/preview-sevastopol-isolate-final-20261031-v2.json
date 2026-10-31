@@ -1,0 +1,58 @@
+{
+  "request_id": "preview-sevastopol-isolate-final-20261031-v2",
+  "action": "preview_order",
+  "kind": "customerorder",
+  "agent_id": "6523171d-2557-11ee-0a80-07f8000cd58d",
+  "store_id": "0652dd44-3c3a-11e8-9109-f8fc0015f6b0",
+  "description": "Crush-PRO. Заказ покупателя Сергей Севастополь (Серёга Севос). Сывороточный изолят 1 кг, 20 банок: Пломбир 3 (вместо ванили), Молочный шоколад 2, Черника 3 (вместо голубки), Персик 2, Манго 1, Печенье и банан 4, Малина 2, Клубника 3. Оптовая цена 2700 ₽ за банку.",
+  "positions": [
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d94ff74-e23f-11ef-0a80-08b50035d18b",
+      "quantity": "3",
+      "price_rub": "2700.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d8af0ad-e23f-11ef-0a80-08b50035d16f",
+      "quantity": "2",
+      "price_rub": "2700.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d9a04c1-e23f-11ef-0a80-08b50035d196",
+      "quantity": "3",
+      "price_rub": "2700.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d8e6de9-e23f-11ef-0a80-08b50035d178",
+      "quantity": "2",
+      "price_rub": "2700.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d86de19-e23f-11ef-0a80-08b50035d166",
+      "quantity": "1",
+      "price_rub": "2700.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d91b347-e23f-11ef-0a80-08b50035d181",
+      "quantity": "4",
+      "price_rub": "2700.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d830659-e23f-11ef-0a80-08b50035d15d",
+      "quantity": "2",
+      "price_rub": "2700.00"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d7f6fab-e23f-11ef-0a80-08b50035d154",
+      "quantity": "3",
+      "price_rub": "2700.00"
+    }
+  ]
+}
