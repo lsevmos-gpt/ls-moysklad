@@ -1,5 +1,404 @@
 {
   "request_id": "inspect-three-orders-supplier-20261031-v1",
-  "status": "error",
-  "message": "Состав текущего заказа отличается от подтвержденного: ЛС Конная"
+  "action": "inspect_consolidated_supply",
+  "status": "ok",
+  "supplier": {
+    "id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+    "name": "ООО \"КРАШ КОМПАНИ\""
+  },
+  "source_orders": [
+    {
+      "label": "ЛС Героев",
+      "order_name": "00078",
+      "total_rub": "19950.00",
+      "original_total_rub": "19950.00",
+      "positions": 11,
+      "units": "15.0",
+      "changes_from_original": []
+    },
+    {
+      "label": "Сергей Севастополь",
+      "order_name": "00079",
+      "total_rub": "54000.00",
+      "original_total_rub": "54000.00",
+      "positions": 8,
+      "units": "20.0",
+      "changes_from_original": []
+    },
+    {
+      "label": "ЛС Конная",
+      "order_name": "00080",
+      "total_rub": "10500.00",
+      "original_total_rub": "10500.00",
+      "positions": 7,
+      "units": "10.0",
+      "changes_from_original": [
+        {
+          "assortment_type": "variant",
+          "assortment_id": "0887cbad-d517-11f1-0a80-1d670026da7c",
+          "expected_quantity": null,
+          "actual_quantity": "1.0",
+          "expected_price_rub": null,
+          "actual_price_rub": "1100.00"
+        },
+        {
+          "assortment_type": "variant",
+          "assortment_id": "3119b90a-b38d-11ea-0a80-010d00088608",
+          "expected_quantity": "1",
+          "actual_quantity": null,
+          "expected_price_rub": "1100.00",
+          "actual_price_rub": null
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "assortment_type": "product",
+      "assortment_id": "b5d259e4-9f9f-11ed-0a80-00aa0024bc2e",
+      "name": "CRUSH PWR Предтренировочный комплекс 200 г.",
+      "quantity": "2.0",
+      "by_source": {
+        "ЛС Конная": "2.0"
+      },
+      "catalog_buy_rub": "1000.00",
+      "parent_buy_rub": null,
+      "last_purchase_rub": "1000.00",
+      "last_purchase_order": "00030"
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "098e730e-97f3-11ec-0a80-099a0023cbf3",
+      "name": "Витамин D3 60 таб. 5000 МЕ в одной таб.",
+      "quantity": "2.0",
+      "by_source": {
+        "ЛС Героев": "2.0"
+      },
+      "catalog_buy_rub": "250.00",
+      "parent_buy_rub": null,
+      "last_purchase_rub": null,
+      "last_purchase_order": null
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "14ada336-6ac0-11e7-7a31-d0fd00148c39",
+      "name": "Витамин С 60 кап. 1000 мг. в одной кап.",
+      "quantity": "1.0",
+      "by_source": {
+        "ЛС Героев": "1.0"
+      },
+      "catalog_buy_rub": "250.00",
+      "parent_buy_rub": null,
+      "last_purchase_rub": "250.00",
+      "last_purchase_order": "00030"
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "b00056ae-cc78-11ec-0a80-06140070faa2",
+      "name": "Витамины Магний + В6 90 таб.",
+      "quantity": "2.0",
+      "by_source": {
+        "ЛС Героев": "2.0"
+      },
+      "catalog_buy_rub": "350.00",
+      "parent_buy_rub": null,
+      "last_purchase_rub": "350.00",
+      "last_purchase_order": "00023"
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "336e9267-6abe-11e7-7a34-5acf0013b601",
+      "name": "Глюкозамин хондроитин МСМ 1000 мг 120 капсул",
+      "quantity": "1.0",
+      "by_source": {
+        "ЛС Героев": "1.0"
+      },
+      "catalog_buy_rub": "500.00",
+      "parent_buy_rub": null,
+      "last_purchase_rub": null,
+      "last_purchase_order": null
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "69d03c56-84ce-11ec-0a80-02f9001b756c",
+      "name": "Омега - 3 (рыбный жир) 1000 мг 180 капсул",
+      "quantity": "2.0",
+      "by_source": {
+        "ЛС Конная": "2.0"
+      },
+      "catalog_buy_rub": "850.00",
+      "parent_buy_rub": null,
+      "last_purchase_rub": "850.00",
+      "last_purchase_order": "00020"
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "7f70f7b8-b391-11ea-0a80-0495000845ca",
+      "name": "Цинк 60 таб. 25 мг в 1 таб.",
+      "quantity": "2.0",
+      "by_source": {
+        "ЛС Героев": "2.0"
+      },
+      "catalog_buy_rub": "250.00",
+      "parent_buy_rub": null,
+      "last_purchase_rub": "250.00",
+      "last_purchase_order": "00030"
+    },
+    {
+      "assortment_type": "product",
+      "assortment_id": "ae866e0b-6abf-11e7-7a69-9711000a2cae",
+      "name": "Цитруллин малат 200 г.",
+      "quantity": "2.0",
+      "by_source": {
+        "ЛС Конная": "2.0"
+      },
+      "catalog_buy_rub": "700.00",
+      "parent_buy_rub": null,
+      "last_purchase_rub": null,
+      "last_purchase_order": null
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "c8b1a01f-6abc-11e7-7a6c-d2a900142eea",
+      "name": "Бцаа 2:1:1 200 г. (Зеленое яблоко)",
+      "quantity": "1.0",
+      "by_source": {
+        "ЛС Конная": "1.0"
+      },
+      "catalog_buy_rub": null,
+      "parent_buy_rub": "500.00",
+      "last_purchase_rub": "500.00",
+      "last_purchase_order": "00030"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "32169bbb-7f01-11ee-0a80-13c60013abcc",
+      "name": "Бцаа 2:1:1 200 г. (Клубника)",
+      "quantity": "1.0",
+      "by_source": {
+        "ЛС Конная": "1.0"
+      },
+      "catalog_buy_rub": null,
+      "parent_buy_rub": "500.00",
+      "last_purchase_rub": "500.00",
+      "last_purchase_order": "00030"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "0887cbad-d517-11f1-0a80-1d670026da7c",
+      "name": "Изотоник витаминно - минеральный 900 г. (банка) (Вишня)",
+      "quantity": "1.0",
+      "by_source": {
+        "ЛС Конная": "1.0"
+      },
+      "catalog_buy_rub": null,
+      "parent_buy_rub": "700.00",
+      "last_purchase_rub": null,
+      "last_purchase_order": null
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "ce15f055-7acb-11ec-0a80-02c8001144f1",
+      "name": "Коллаген с витамином С 200 г. (Вишня)",
+      "quantity": "1.0",
+      "by_source": {
+        "ЛС Конная": "1.0"
+      },
+      "catalog_buy_rub": null,
+      "parent_buy_rub": "500.00",
+      "last_purchase_rub": "500.00",
+      "last_purchase_order": "00027"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "ce1caf6a-7acb-11ec-0a80-02c8001144fe",
+      "name": "Коллаген с витамином С 200 г. (Персик)",
+      "quantity": "1.0",
+      "by_source": {
+        "ЛС Героев": "1.0"
+      },
+      "catalog_buy_rub": null,
+      "parent_buy_rub": "500.00",
+      "last_purchase_rub": "500.00",
+      "last_purchase_order": "00027"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d7bdfc3-e23f-11ef-0a80-08b50035d14b",
+      "name": "Сывороточный изолят 1 кг (Банка) (Ирландский капучино)",
+      "quantity": "1.0",
+      "by_source": {
+        "ЛС Героев": "1.0"
+      },
+      "catalog_buy_rub": null,
+      "parent_buy_rub": "2000.00",
+      "last_purchase_rub": "2000.00",
+      "last_purchase_order": "00027"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d7f6fab-e23f-11ef-0a80-08b50035d154",
+      "name": "Сывороточный изолят 1 кг (Банка) (Клубника)",
+      "quantity": "4.0",
+      "by_source": {
+        "ЛС Героев": "1.0",
+        "Сергей Севастополь": "3.0"
+      },
+      "catalog_buy_rub": null,
+      "parent_buy_rub": "2000.00",
+      "last_purchase_rub": "2000.00",
+      "last_purchase_order": "00030"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d830659-e23f-11ef-0a80-08b50035d15d",
+      "name": "Сывороточный изолят 1 кг (Банка) (Малина)",
+      "quantity": "2.0",
+      "by_source": {
+        "Сергей Севастополь": "2.0"
+      },
+      "catalog_buy_rub": null,
+      "parent_buy_rub": "2000.00",
+      "last_purchase_rub": "2000.00",
+      "last_purchase_order": "00030"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d86de19-e23f-11ef-0a80-08b50035d166",
+      "name": "Сывороточный изолят 1 кг (Банка) (Манго)",
+      "quantity": "1.0",
+      "by_source": {
+        "Сергей Севастополь": "1.0"
+      },
+      "catalog_buy_rub": null,
+      "parent_buy_rub": "2000.00",
+      "last_purchase_rub": "2000.00",
+      "last_purchase_order": "00022"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d8af0ad-e23f-11ef-0a80-08b50035d16f",
+      "name": "Сывороточный изолят 1 кг (Банка) (Молочный шоколад)",
+      "quantity": "3.0",
+      "by_source": {
+        "ЛС Героев": "1.0",
+        "Сергей Севастополь": "2.0"
+      },
+      "catalog_buy_rub": "2000.00",
+      "parent_buy_rub": "2000.00",
+      "last_purchase_rub": "2000.00",
+      "last_purchase_order": "00030"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d8e6de9-e23f-11ef-0a80-08b50035d178",
+      "name": "Сывороточный изолят 1 кг (Банка) (Персик)",
+      "quantity": "2.0",
+      "by_source": {
+        "Сергей Севастополь": "2.0"
+      },
+      "catalog_buy_rub": null,
+      "parent_buy_rub": "2000.00",
+      "last_purchase_rub": "2000.00",
+      "last_purchase_order": "00030"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d91b347-e23f-11ef-0a80-08b50035d181",
+      "name": "Сывороточный изолят 1 кг (Банка) (Печенье и банан)",
+      "quantity": "4.0",
+      "by_source": {
+        "Сергей Севастополь": "4.0"
+      },
+      "catalog_buy_rub": null,
+      "parent_buy_rub": "2000.00",
+      "last_purchase_rub": "2000.00",
+      "last_purchase_order": "00030"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d94ff74-e23f-11ef-0a80-08b50035d18b",
+      "name": "Сывороточный изолят 1 кг (Банка) (Пломбир)",
+      "quantity": "5.0",
+      "by_source": {
+        "ЛС Героев": "2.0",
+        "Сергей Севастополь": "3.0"
+      },
+      "catalog_buy_rub": null,
+      "parent_buy_rub": "2000.00",
+      "last_purchase_rub": "2000.00",
+      "last_purchase_order": "00030"
+    },
+    {
+      "assortment_type": "variant",
+      "assortment_id": "9d9a04c1-e23f-11ef-0a80-08b50035d196",
+      "name": "Сывороточный изолят 1 кг (Банка) (Черника)",
+      "quantity": "4.0",
+      "by_source": {
+        "ЛС Героев": "1.0",
+        "Сергей Севастополь": "3.0"
+      },
+      "catalog_buy_rub": null,
+      "parent_buy_rub": "2000.00",
+      "last_purchase_rub": "2000.00",
+      "last_purchase_order": "00030"
+    }
+  ],
+  "total_quantity": 45,
+  "unique_positions": 22,
+  "changed_sources": [
+    "ЛС Конная"
+  ],
+  "purchase_history_checked": [
+    {
+      "name": "00030",
+      "id": "afe5fdaf-c3bb-11f1-0a80-1f64000c64b8"
+    },
+    {
+      "name": "00028",
+      "id": "8d1555ac-c3bb-11f1-0a80-13d8000b2c8b"
+    },
+    {
+      "name": "00027",
+      "id": "9d238c4e-ad16-11f1-0a80-0df4001858b0"
+    },
+    {
+      "name": "00026",
+      "id": "8bea7064-ad16-11f1-0a80-0286001ac13b"
+    },
+    {
+      "name": "00025",
+      "id": "aa01efcd-ab50-11f1-0a80-1ea60080cc00"
+    },
+    {
+      "name": "00024",
+      "id": "3885d87c-93ca-11f1-0a80-0cab001fe1de"
+    },
+    {
+      "name": "00023",
+      "id": "3eb6016f-8c38-11f1-0a80-1f4f00004156"
+    },
+    {
+      "name": "00022",
+      "id": "26610c25-8c38-11f1-0a80-193d000043e5"
+    },
+    {
+      "name": "00021",
+      "id": "1e05c938-89c2-11f1-0a80-15c20039b7ec"
+    },
+    {
+      "name": "00020",
+      "id": "40cfd497-7236-11f1-0a80-0fed001b106f"
+    },
+    {
+      "name": "00019",
+      "id": "48d6845f-6b21-11f1-0a80-0f6800277d46"
+    },
+    {
+      "name": "00018",
+      "id": "55958021-6a7a-11f1-0a80-1343001572a5"
+    }
+  ],
+  "missing_requested_item": "Изотоник Вишня 1 шт. отсутствует в каталоге и заказе Конной.",
+  "note": "Проверено с реальными позициями и суммами трех текущих заказов. Текущие цены закупки и прошлые цены показаны раздельно. Никакой документ не создан."
 }
