@@ -1,0 +1,59 @@
+{
+  "request_id": "hero-extra-20261031-vitamind3",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "product",
+  "query": "витамин D",
+  "matches": [
+    {
+      "id": "098e730e-97f3-11ec-0a80-099a0023cbf3",
+      "name": "Витамин D3 60 таб. 5000 МЕ в одной таб.",
+      "code": "00079",
+      "salePrices": [
+        {
+          "value_rub": "600.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "450.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "450.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "400.00",
+          "priceType": "Опт для залов"
+        }
+      ],
+      "buyPrice_rub": "250.00"
+    },
+    {
+      "id": "3db22291-21fd-11f0-0a80-05d9001351fa",
+      "name": "Кальций с витамином D3, 600 мг, 90 капсул",
+      "code": "00097",
+      "salePrices": [
+        {
+          "value_rub": "450.00",
+          "priceType": "Розничная цена (скидка)"
+        },
+        {
+          "value_rub": "400.00",
+          "priceType": "Оптовая цена"
+        },
+        {
+          "value_rub": "400.00",
+          "priceType": "Опт для тренеров"
+        },
+        {
+          "value_rub": "400.00",
+          "priceType": "Опт для залов"
+        }
+      ],
+      "buyPrice_rub": "200.00"
+    }
+  ],
+  "returned": 2,
+  "truncated": false
+}
