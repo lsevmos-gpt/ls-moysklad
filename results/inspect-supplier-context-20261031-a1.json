@@ -1,0 +1,291 @@
+{
+  "request_id": "inspect-supplier-context-20261031-a1",
+  "action": "inspect_purchase_context",
+  "status": "ok",
+  "purchase_orders": [
+    {
+      "document_id": "afe5fdaf-c3bb-11f1-0a80-1f64000c64b8",
+      "document_name": "00030",
+      "moment": "2026-10-09 11:30:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": true,
+      "sum_rub": "83800.0"
+    },
+    {
+      "document_id": "8d23cee8-c3bb-11f1-0a80-13d8000b2c9f",
+      "document_name": "00029",
+      "moment": "2026-10-09 11:29:00.000",
+      "agent_id": "ad620760-62f4-11ee-0a80-012a0001c949",
+      "agent_name": "Неизвестный поставщик",
+      "applicable": false,
+      "sum_rub": "200.0"
+    },
+    {
+      "document_id": "8d1555ac-c3bb-11f1-0a80-13d8000b2c8b",
+      "document_name": "00028",
+      "moment": "2026-10-09 11:29:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": false,
+      "sum_rub": "71200.0"
+    },
+    {
+      "document_id": "9d238c4e-ad16-11f1-0a80-0df4001858b0",
+      "document_name": "00027",
+      "moment": "2026-09-10 15:53:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": true,
+      "sum_rub": "104350.0"
+    },
+    {
+      "document_id": "8bea7064-ad16-11f1-0a80-0286001ac13b",
+      "document_name": "00026",
+      "moment": "2026-09-10 15:52:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": false,
+      "sum_rub": "15000.0"
+    },
+    {
+      "document_id": "aa01efcd-ab50-11f1-0a80-1ea60080cc00",
+      "document_name": "00025",
+      "moment": "2026-09-08 09:43:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": false,
+      "sum_rub": "92850.0"
+    },
+    {
+      "document_id": "3885d87c-93ca-11f1-0a80-0cab001fe1de",
+      "document_name": "00024",
+      "moment": "2026-08-09 11:12:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": true,
+      "sum_rub": "17050.0"
+    },
+    {
+      "document_id": "3eb6016f-8c38-11f1-0a80-1f4f00004156",
+      "document_name": "00023",
+      "moment": "2026-07-30 20:01:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": false,
+      "sum_rub": "6850.0"
+    },
+    {
+      "document_id": "26610c25-8c38-11f1-0a80-193d000043e5",
+      "document_name": "00022",
+      "moment": "2026-07-30 20:00:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": false,
+      "sum_rub": "64500.0"
+    },
+    {
+      "document_id": "1e05c938-89c2-11f1-0a80-15c20039b7ec",
+      "document_name": "00021",
+      "moment": "2026-07-27 16:50:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": false,
+      "sum_rub": "50000.0"
+    },
+    {
+      "document_id": "40cfd497-7236-11f1-0a80-0fed001b106f",
+      "document_name": "00020",
+      "moment": "2026-06-27 17:25:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": true,
+      "sum_rub": "9400.0"
+    },
+    {
+      "document_id": "48d6845f-6b21-11f1-0a80-0f6800277d46",
+      "document_name": "00019",
+      "moment": "2026-06-18 17:22:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": true,
+      "sum_rub": "3900.0"
+    },
+    {
+      "document_id": "55958021-6a7a-11f1-0a80-1343001572a5",
+      "document_name": "00018",
+      "moment": "2026-06-17 21:28:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": true,
+      "sum_rub": "109200.0"
+    },
+    {
+      "document_id": "47730b23-6a7a-11f1-0a80-048a00160faa",
+      "document_name": "00017",
+      "moment": "2026-06-17 21:27:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": false,
+      "sum_rub": "36000.0"
+    },
+    {
+      "document_id": "ff2de75c-5ff1-11f1-0a80-0e500008c47b",
+      "document_name": "00016",
+      "moment": "2026-06-04 11:47:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": false,
+      "sum_rub": "17700.0"
+    },
+    {
+      "document_id": "e5208d7a-5ff1-11f1-0a80-1f2b0009aa03",
+      "document_name": "00015",
+      "moment": "2026-06-04 11:46:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": false,
+      "sum_rub": "70000.0"
+    },
+    {
+      "document_id": "dd287ee3-3f0c-11f1-0a80-1086000e7822",
+      "document_name": "00014",
+      "moment": "2026-04-23 15:06:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": true,
+      "sum_rub": "70000.0"
+    },
+    {
+      "document_id": "c9b24fdc-3f0c-11f1-0a80-18df000e7e39",
+      "document_name": "00013",
+      "moment": "2026-04-23 15:05:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": false,
+      "sum_rub": "18000.0"
+    },
+    {
+      "document_id": "548efac0-3f0c-11f1-0a80-1dee000f1239",
+      "document_name": "00012",
+      "moment": "2026-04-23 15:02:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": true,
+      "sum_rub": "21500.0"
+    },
+    {
+      "document_id": "44037268-3f0c-11f1-0a80-0f92000eb4d7",
+      "document_name": "00011",
+      "moment": "2026-04-23 15:02:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": false,
+      "sum_rub": "28000.0"
+    },
+    {
+      "document_id": "85098bc6-2e62-11f1-0a80-10880005a567",
+      "document_name": "00010",
+      "moment": "2026-04-02 10:06:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": false,
+      "sum_rub": "43600.0"
+    },
+    {
+      "document_id": "5cc3157b-2e62-11f1-0a80-09df00056dbe",
+      "document_name": "00009",
+      "moment": "2026-04-02 10:05:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": false,
+      "sum_rub": "9000.0"
+    },
+    {
+      "document_id": "5da92928-29c9-11f1-0a80-084b00203f28",
+      "document_name": "00008",
+      "moment": "2026-03-27 13:34:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": true,
+      "sum_rub": "14100.0"
+    },
+    {
+      "document_id": "ecb373d6-1c45-11f1-0a80-03820035653b",
+      "document_name": "00007",
+      "moment": "2026-03-10 08:56:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": true,
+      "sum_rub": "44700.0"
+    },
+    {
+      "document_id": "29a95918-17ca-11f1-0a80-00e70010fefd",
+      "document_name": "00006",
+      "moment": "2026-03-04 16:00:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": true,
+      "sum_rub": "2000.0"
+    },
+    {
+      "document_id": "b568dfff-027a-11f1-0a80-0640000b07ec",
+      "document_name": "00005",
+      "moment": "2026-02-05 13:08:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": true,
+      "sum_rub": "104250.0"
+    },
+    {
+      "document_id": "a52a6490-027a-11f1-0a80-1af2000ab275",
+      "document_name": "00004",
+      "moment": "2026-02-05 13:08:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": false,
+      "sum_rub": "18000.0"
+    },
+    {
+      "document_id": "7540dce0-027a-11f1-0a80-13a4000a17db",
+      "document_name": "00003",
+      "moment": "2026-02-05 13:07:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": false,
+      "sum_rub": "72000.0"
+    },
+    {
+      "document_id": "35e514ec-ea1b-11f0-0a80-1b84006f9144",
+      "document_name": "00002",
+      "moment": "2026-01-05 12:45:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": false,
+      "sum_rub": "18800.0"
+    },
+    {
+      "document_id": "7040c720-ea1a-11f0-0a80-1c2f00705196",
+      "document_name": "00001",
+      "moment": "2026-01-05 12:39:00.000",
+      "agent_id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "agent_name": "ООО \"КРАШ КОМПАНИ\"",
+      "applicable": false,
+      "sum_rub": "53750.0"
+    }
+  ],
+  "suppliers": [
+    {
+      "id": "3f51ee71-6a00-11e7-7a6c-d2a9000b16f1",
+      "name": "ООО \"КРАШ КОМПАНИ\"",
+      "supplier": null
+    },
+    {
+      "id": "ad620760-62f4-11ee-0a80-012a0001c949",
+      "name": "Неизвестный поставщик",
+      "supplier": null
+    }
+  ],
+  "returned": 30,
+  "note": "История заказов поставщикам из подключённого МоегоСклада, только чтение."
+}
