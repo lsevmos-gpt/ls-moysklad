@@ -1,0 +1,7 @@
+{
+  "request_id": "hero-extra-20261031-zinc",
+  "action": "lookup",
+  "entity": "product",
+  "query": "Цинк",
+  "limit": 100
+}
