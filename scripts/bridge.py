@@ -556,6 +556,9 @@ def execute(req: dict, api: MoySkladAPI, results_dir: Path, *, writes_enabled: b
     elif action == "inspect_consolidated_supply":
         from .supplier_consolidation import inspect_consolidated_supply
         output = inspect_consolidated_supply(req, api, results_dir)
+    elif action == "audit_three_orders":
+        from .verify_three_orders import audit_three_orders
+        output = audit_three_orders(req, api, results_dir)
     else:
         raise BridgeError("action: допустимы lookup, preview_order, create_order, inspect_order_price, refresh_order_price, refresh_from_confirmed_order, inspect_order_additions, apply_order_additions")
     return {"request_id": rid, "action": action, **output}
