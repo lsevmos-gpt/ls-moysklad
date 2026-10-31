@@ -173,10 +173,12 @@ def _check_state(
         raise BridgeError("Номер заказа в МойСклад изменился; запись отменена")
     if doc.get("externalCode") != recorded["externalCode"]:
         raise BridgeError("Внешний код заказа в МойСклад изменился; запись отменена")
-    if doc.get("applicable") is True:
-        raise BridgeError("Заказ сейчас ПРОВЕДЕН; автоматическое дополнение заблокировано")
-    if doc.get("applicable") is not False:
-        raise BridgeError("МойСклад не вернул однозначное поле applicable; автоматическое дополнение заблокировано")
+    if type(doc.get("applicable")) is not bool:
+        raise BridgeError("МойСклад не вернул однозначное поле applicable; обновление заблокировано")
+    if doc.get("shippedSum", 0) not in (None, 0):
+        raise BridgeError("По заказу уже есть отгрузка; дополнение остановлено для проверки вручную")
+    recorded = dict(recorded)
+    recorded["applicable_before"] = doc["applicable"]
     if _linked_entity_id(doc.get("agent"), "counterparty") != source["agent_id"]:
         raise BridgeError("У заказа другой покупатель")
     if _linked_entity_id(doc.get("organization"), "organization") != CRUSH_PRO_ORGANIZATION_ID:
@@ -213,6 +215,7 @@ def handle_order_amendment(req: dict, api: MoySkladAPI, results_dir: Path, *, wr
         "order_id": order_id,
         "document_url": recorded.get("document_url"),
         "customer": "ЛС Героев",
+        "was_posted": recorded["applicable_before"],
         "old_total_rub": fmt_rub(old_total),
         "added_total_rub": fmt_rub(new_total - old_total),
         "new_total_rub": fmt_rub(new_total),
@@ -271,11 +274,11 @@ def handle_order_amendment(req: dict, api: MoySkladAPI, results_dir: Path, *, wr
             target[key] = (qty, price)
     live = {key: (p[0], p[1]) for key, p in rows.items()}
     if (live != target or verified.get("sum") != new_total
-        or verified.get("applicable") is not False
+        or verified.get("applicable") is not recorded["applicable_before"]
         or verified.get("externalCode") != recorded["externalCode"]):
         raise BridgeError("Ответ проверки после изменения не совпал; проверьте заказ вручную")
     return {
         "status": "updated", **common, "positions_before": len(baseline),
         "positions_after": len(live),
-        "note": "Позиции изменены в существующем непроведенном заказе. Оплата и отгрузка не выполнялись.",
+        "note": "Позиции изменены в существующем заказе с сохранением признака проведения. Оплата и отгрузка не выполнялись.",
     }
