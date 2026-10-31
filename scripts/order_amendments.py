@@ -167,10 +167,14 @@ def _check_state(
         raise BridgeError("Исходный расчет позиций не совпадает с суммой")
     _latest_order(api, source["agent_id"], order_id)
     doc = api.call("GET", "/entity/customerorder/" + order_id)
-    if (doc.get("id") != order_id or doc.get("name") != recorded["document_name"]
-        or doc.get("externalCode") != recorded["externalCode"]
-        or doc.get("applicable") is not False):
-        raise BridgeError("Исходный заказ изменен или проведен; запись отменена")
+    if doc.get("id") != order_id:
+        raise BridgeError("Идентификатор исходного заказа не совпадает")
+    if doc.get("name") != recorded["document_name"]:
+        raise BridgeError("Номер заказа в МойСклад изменился; запись отменена")
+    if doc.get("externalCode") != recorded["externalCode"]:
+        raise BridgeError("Внешний код заказа в МойСклад изменился; запись отменена")
+    if doc.get("applicable") is not False:
+        raise BridgeError("Заказ сейчас проведен или неизвестен его статус проведения; запись отменена")
     if _linked_entity_id(doc.get("agent"), "counterparty") != source["agent_id"]:
         raise BridgeError("У заказа другой покупатель")
     if _linked_entity_id(doc.get("organization"), "organization") != CRUSH_PRO_ORGANIZATION_ID:
