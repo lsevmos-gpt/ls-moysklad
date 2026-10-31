@@ -1,0 +1,85 @@
+{
+  "request_id": "inspect-tsarapin-pricing-20261031-v1",
+  "action": "inspect_customer_pricing",
+  "status": "ok",
+  "buyer": {
+    "id": "903facc5-fd6e-11ea-0a80-00ab0003ccb2",
+    "name": "Александр царапина"
+  },
+  "customer_price_type": "Опт для залов",
+  "recent_order_history": [
+    {
+      "number": "00147",
+      "date": "2025-10-30 11:17:00.000",
+      "relevant_products": []
+    },
+    {
+      "number": "00135",
+      "date": "2025-10-08 20:43:00.000",
+      "relevant_products": []
+    },
+    {
+      "number": "00119",
+      "date": "2025-09-22 09:40:00.000",
+      "relevant_products": [
+        {
+          "item_id": "9ec2009a-b38a-11ea-0a80-010d000866d6",
+          "qty": "1.0",
+          "price_rub": "1200.00"
+        }
+      ]
+    },
+    {
+      "number": "00040",
+      "date": "2025-03-15 15:22:00.000",
+      "relevant_products": [
+        {
+          "item_id": "9ec2009a-b38a-11ea-0a80-010d000866d6",
+          "qty": "1.0",
+          "price_rub": "1200.00"
+        }
+      ]
+    },
+    {
+      "number": "00177",
+      "date": "2024-09-26 11:56:00.000",
+      "relevant_products": []
+    },
+    {
+      "number": "00105",
+      "date": "2024-05-24 22:38:00.000",
+      "relevant_products": []
+    },
+    {
+      "number": "00341",
+      "date": "2023-12-06 11:35:00.000",
+      "relevant_products": []
+    },
+    {
+      "number": "00334",
+      "date": "2023-11-22 10:27:00.000",
+      "relevant_products": []
+    },
+    {
+      "number": "00295",
+      "date": "2023-10-17 11:11:00.000",
+      "relevant_products": []
+    },
+    {
+      "number": "00280",
+      "date": "2023-10-05 20:33:00.000",
+      "relevant_products": []
+    },
+    {
+      "number": "00243",
+      "date": "2023-08-22 11:18:00.000",
+      "relevant_products": []
+    },
+    {
+      "number": "00208",
+      "date": "2023-07-26 13:29:00.000",
+      "relevant_products": []
+    }
+  ],
+  "message": "Read-only inspection; no orders created."
+}
