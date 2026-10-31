@@ -1,0 +1,7 @@
+{
+  "request_id": "hero-extra-20261031-coffeeprod",
+  "action": "lookup",
+  "entity": "product",
+  "query": "Кофе",
+  "limit": 100
+}
