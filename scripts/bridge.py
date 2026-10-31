@@ -547,6 +547,9 @@ def execute(req: dict, api: MoySkladAPI, results_dir: Path, *, writes_enabled: b
         output = refresh_customer_order_line(req, api, writes_enabled=writes_enabled)
     elif action == "refresh_from_confirmed_order":
         output = refresh_from_confirmed_order(req, api, results_dir, writes_enabled=writes_enabled)
+    elif action in {"inspect_order_additions", "apply_order_additions"}:
+        from .order_amendments import handle_order_amendment
+        output = handle_order_amendment(req, api, results_dir, writes_enabled=writes_enabled)
     else:
-        raise BridgeError("action: допустимы lookup, preview_order, create_order, inspect_order_price, refresh_order_price, refresh_from_confirmed_order")
+        raise BridgeError("action: допустимы lookup, preview_order, create_order, inspect_order_price, refresh_order_price, refresh_from_confirmed_order, inspect_order_additions, apply_order_additions")
     return {"request_id": rid, "action": action, **output}
