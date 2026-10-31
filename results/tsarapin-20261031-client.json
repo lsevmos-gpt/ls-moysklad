@@ -1,0 +1,19 @@
+{
+  "request_id": "tsarapin-20261031-client",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "counterparty",
+  "query": "Царап",
+  "matches": [
+    {
+      "id": "35666134-5de8-11ee-0a80-0b450020db5b",
+      "name": "Антон товарищ Саши царапина"
+    },
+    {
+      "id": "903facc5-fd6e-11ea-0a80-00ab0003ccb2",
+      "name": "Александр царапина"
+    }
+  ],
+  "returned": 2,
+  "truncated": false
+}
