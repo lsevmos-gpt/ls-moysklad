@@ -562,6 +562,9 @@ def execute(req: dict, api: MoySkladAPI, results_dir: Path, *, writes_enabled: b
     elif action == "restore_konnaya_raspberry":
         from .fix_konnaya import restore_konnaya_raspberry
         output = restore_konnaya_raspberry(req, api, results_dir, writes_enabled=writes_enabled)
+    elif action == "inspect_customer_pricing":
+        from .inspect_customer_pricing import inspect_customer_pricing
+        output = inspect_customer_pricing(req, api)
     else:
         raise BridgeError("action: допустимы lookup, preview_order, create_order, inspect_order_price, refresh_order_price, refresh_from_confirmed_order, inspect_order_additions, apply_order_additions")
     return {"request_id": rid, "action": action, **output}
