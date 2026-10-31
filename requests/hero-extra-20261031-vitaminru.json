@@ -1,0 +1,7 @@
+{
+  "request_id": "hero-extra-20261031-vitaminru",
+  "action": "lookup",
+  "entity": "product",
+  "query": "витамин Д",
+  "limit": 100
+}
