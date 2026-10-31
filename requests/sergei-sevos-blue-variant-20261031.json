@@ -1,0 +1,7 @@
+{
+  "request_id": "sergei-sevos-blue-variant-20261031",
+  "action": "lookup",
+  "entity": "variant",
+  "query": "Черник",
+  "limit": 100
+}
