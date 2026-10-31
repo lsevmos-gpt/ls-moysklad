@@ -1,0 +1,10 @@
+{
+  "request_id": "sergei-sevos-vanilla-20261031",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "variant",
+  "query": "Ваниль",
+  "matches": [],
+  "returned": 0,
+  "truncated": false
+}
