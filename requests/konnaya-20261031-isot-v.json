@@ -1,0 +1,7 @@
+{
+  "request_id": "konnaya-20261031-isot-v",
+  "action": "lookup",
+  "entity": "variant",
+  "query": "Изотоник",
+  "limit": 100
+}
