@@ -550,6 +550,9 @@ def execute(req: dict, api: MoySkladAPI, results_dir: Path, *, writes_enabled: b
     elif action in {"inspect_order_additions", "apply_order_additions"}:
         from .order_amendments import handle_order_amendment
         output = handle_order_amendment(req, api, results_dir, writes_enabled=writes_enabled)
+    elif action == "inspect_purchase_context":
+        from .supplier_context import inspect_purchase_context
+        output = inspect_purchase_context(req, api)
     else:
         raise BridgeError("action: допустимы lookup, preview_order, create_order, inspect_order_price, refresh_order_price, refresh_from_confirmed_order, inspect_order_additions, apply_order_additions")
     return {"request_id": rid, "action": action, **output}
