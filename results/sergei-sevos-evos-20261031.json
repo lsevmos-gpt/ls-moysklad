@@ -1,0 +1,10 @@
+{
+  "request_id": "sergei-sevos-evos-20261031",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "counterparty",
+  "query": "Евос",
+  "matches": [],
+  "returned": 0,
+  "truncated": false
+}

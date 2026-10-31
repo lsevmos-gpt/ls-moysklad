@@ -1,0 +1,27 @@
+{
+  "request_id": "sergei-sevos-sev-20261031",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "counterparty",
+  "query": "Сев",
+  "matches": [
+    {
+      "id": "34a55030-573d-11ef-0a80-13900023a2eb",
+      "name": "Павел Севастополь"
+    },
+    {
+      "id": "617c263d-eab2-11ea-0a80-04f6001948a9",
+      "name": "Наталья Гусева"
+    },
+    {
+      "id": "6523171d-2557-11ee-0a80-07f8000cd58d",
+      "name": "Сергей Севастополь"
+    },
+    {
+      "id": "6fb5799a-e63b-11ef-0a80-13cb001b2878",
+      "name": "Марина Севастополь"
+    }
+  ],
+  "returned": 4,
+  "truncated": false
+}
