@@ -1,0 +1,10 @@
+{
+  "request_id": "sergei-sevos-vanilla-product-20261031",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "product",
+  "query": "Ванил",
+  "matches": [],
+  "returned": 0,
+  "truncated": false
+}

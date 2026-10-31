@@ -1,0 +1,10 @@
+{
+  "request_id": "sergei-sevos-blueberry-product-20261031",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "product",
+  "query": "Голуб",
+  "matches": [],
+  "returned": 0,
+  "truncated": false
+}

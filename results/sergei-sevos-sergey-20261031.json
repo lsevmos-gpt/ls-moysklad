@@ -1,0 +1,15 @@
+{
+  "request_id": "sergei-sevos-sergey-20261031",
+  "action": "lookup",
+  "status": "ok",
+  "entity": "counterparty",
+  "query": "Сергей Севастополь",
+  "matches": [
+    {
+      "id": "6523171d-2557-11ee-0a80-07f8000cd58d",
+      "name": "Сергей Севастополь"
+    }
+  ],
+  "returned": 1,
+  "truncated": false
+}
