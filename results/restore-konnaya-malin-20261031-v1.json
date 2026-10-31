@@ -1,0 +1,17 @@
+{
+  "request_id": "restore-konnaya-malin-20261031-v1",
+  "action": "restore_konnaya_raspberry",
+  "status": "updated",
+  "order_number": "00080",
+  "order_id": "828f653a-d515-11f1-0a80-197c00664bed",
+  "supplier_order_number": "00031",
+  "item_added": "Изотоник витаминно - минеральный 900 г. (банка) (Малина)",
+  "added_quantity": "1",
+  "unit_price_rub": "1100.00",
+  "original_total_rub": "10500.00",
+  "new_total_rub": "11600.00",
+  "positions_after": 8,
+  "units_after": "11",
+  "supplier_unchanged": true,
+  "note": "Добавлена ровно 1 Малина; Вишня и все остальные позиции сохранены. Заказ поставщику не менялся."
+}
