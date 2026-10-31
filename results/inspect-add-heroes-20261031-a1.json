@@ -1,5 +1,38 @@
 {
   "request_id": "inspect-add-heroes-20261031-a1",
-  "status": "error",
-  "message": "Заказ сейчас ПРОВЕДЕН; автоматическое дополнение заблокировано"
+  "action": "inspect_order_additions",
+  "status": "ok",
+  "mode": "ready",
+  "order_name": "00078",
+  "order_id": "eab549d9-cd50-11f1-0a80-03be007edc83",
+  "document_url": "https://online.moysklad.ru/app/#customerorder/edit?id=eab549d9-cd50-11f1-0a80-03be007edc83",
+  "customer": "ЛС Героев",
+  "was_posted": true,
+  "old_total_rub": "13600.00",
+  "added_total_rub": "6350.00",
+  "new_total_rub": "19950.00",
+  "additions": [
+    {
+      "name": "Сывороточный изолят 1 кг (Банка) (Ирландский капучино)",
+      "quantity": "1",
+      "price_rub": "2600.00"
+    },
+    {
+      "name": "Сывороточный изолят 1 кг (Банка) (Черника)",
+      "quantity": "1",
+      "price_rub": "2600.00"
+    },
+    {
+      "name": "Цинк 60 таб. 25 мг в 1 таб.",
+      "quantity": "1",
+      "price_rub": "350.00"
+    },
+    {
+      "name": "Витамин D3 60 таб. 5000 МЕ в одной таб.",
+      "quantity": "2",
+      "price_rub": "400.00"
+    }
+  ],
+  "preview_sha256": "74154041e83cffc83e0f73ea5eaf73ff1b804a3f94d8ccf30f0045e0759ea044",
+  "note": "Только проверка. Заказ не изменен."
 }
