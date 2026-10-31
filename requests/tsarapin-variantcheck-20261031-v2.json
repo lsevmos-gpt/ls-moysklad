@@ -1,0 +1,7 @@
+{
+  "request_id": "tsarapin-variantcheck-20261031-v2",
+  "action": "lookup",
+  "entity": "variant",
+  "query": "Печенье",
+  "limit": 30
+}
