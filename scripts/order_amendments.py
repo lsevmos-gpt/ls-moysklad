@@ -173,8 +173,10 @@ def _check_state(
         raise BridgeError("Номер заказа в МойСклад изменился; запись отменена")
     if doc.get("externalCode") != recorded["externalCode"]:
         raise BridgeError("Внешний код заказа в МойСклад изменился; запись отменена")
+    if doc.get("applicable") is True:
+        raise BridgeError("Заказ сейчас ПРОВЕДЕН; автоматическое дополнение заблокировано")
     if doc.get("applicable") is not False:
-        raise BridgeError("Заказ сейчас проведен или неизвестен его статус проведения; запись отменена")
+        raise BridgeError("МойСклад не вернул однозначное поле applicable; автоматическое дополнение заблокировано")
     if _linked_entity_id(doc.get("agent"), "counterparty") != source["agent_id"]:
         raise BridgeError("У заказа другой покупатель")
     if _linked_entity_id(doc.get("organization"), "organization") != CRUSH_PRO_ORGANIZATION_ID:
