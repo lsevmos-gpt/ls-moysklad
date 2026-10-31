@@ -1,0 +1,7 @@
+{
+  "request_id": "sergei-sevos-evm-20261031",
+  "action": "lookup",
+  "entity": "counterparty",
+  "query": "Evm",
+  "limit": 100
+}
